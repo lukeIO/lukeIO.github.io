@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on 记录点什么</title>
+    <link>http://localhost:1313/tags/markdown/</link>
+    <description>Recent content in markdown on 记录点什么</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 19 Sep 2021 03:10:49 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>markdown</title>
+      <link>http://localhost:1313/post/markdown/</link>
+      <pubDate>Sun, 19 Sep 2021 03:10:49 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/markdown/</guid>
+      <description>标题 一级标题 标题 二级标题 标题 三级标题 段落 : 段落之间空一行 换行符 : 一行结束时输入两个空格 列表项 : 第一项 第二项 第三项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第四项 abcdef opqrst uvwxyz abcdef opqrst</description>
+    </item>
+    
+  </channel>
+</rss>
