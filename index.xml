@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>记录点什么</title>
-    <link>http://localhost:1313/</link>
+    <link>https://lukeio.github.io/</link>
     <description>Recent content on 记录点什么</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 19 Sep 2021 23:19:59 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Sep 2021 23:19:59 +0000</lastBuildDate><atom:link href="https://lukeio.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://lukeio.github.io/about/</link>
       <pubDate>Tue, 21 Sep 2021 03:55:10 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://lukeio.github.io/about/</guid>
       <description>关于我 Hello world</description>
     </item>
     
     <item>
       <title>Termux</title>
-      <link>http://localhost:1313/post/termux/</link>
+      <link>https://lukeio.github.io/post/termux/</link>
       <pubDate>Sun, 19 Sep 2021 23:19:59 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/termux/</guid>
+      <guid>https://lukeio.github.io/post/termux/</guid>
       <description>参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无</description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>http://localhost:1313/post/markdown/</link>
+      <link>https://lukeio.github.io/post/markdown/</link>
       <pubDate>Sun, 19 Sep 2021 03:10:49 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/markdown/</guid>
+      <guid>https://lukeio.github.io/post/markdown/</guid>
       <description>标题 一级标题 标题 二级标题 标题 三级标题 段落 : 段落之间空一行 换行符 : 一行结束时输入两个空格 列表项 : 第一项 第二项 第三项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第四项 abcdef opqrst uvwxyz abcdef opqrst</description>
     </item>
     
