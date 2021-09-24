@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>记录点什么</title>
+    <title>LukeIO的一些记录和分享</title>
     <link>https://lukeio.github.io/</link>
-    <description>Recent content on 记录点什么</description>
+    <description>Recent content on LukeIO的一些记录和分享</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 19 Sep 2021 23:19:59 +0000</lastBuildDate><atom:link href="https://lukeio.github.io/index.xml" rel="self" type="application/rss+xml" />
