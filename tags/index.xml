@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on LukeIO的一些记录和分享</title>
+    <title>Tags on LukeIO&#39;s Blog</title>
     <link>https://lukeio.github.io/tags/</link>
-    <description>Recent content in Tags on LukeIO的一些记录和分享</description>
+    <description>Recent content in Tags on LukeIO&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 20 Sep 2021 20:19:59 +0000</lastBuildDate><atom:link href="https://lukeio.github.io/tags/index.xml" rel="self" type="application/rss+xml" />

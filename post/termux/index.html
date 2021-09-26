@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Termux - LukeIO的一些记录和分享</title>
+  <title>Termux - LukeIO&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Termux">
 <meta itemprop="description" content="参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无"><meta itemprop="datePublished" content="2021-09-20T20:19:59+00:00" />
 <meta itemprop="dateModified" content="2021-09-20T20:19:59+00:00" />
-<meta itemprop="wordCount" content="2263">
+<meta itemprop="wordCount" content="2206">
 <meta itemprop="keywords" content="termux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Termux"/>
 <meta name="twitter:description" content="参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无"/>
@@ -136,7 +136,7 @@
         <div class="post-category">
             <a href="/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
             </div>
-          <span class="more-meta"> 约 2263 字 </span>
+          <span class="more-meta"> 约 2206 字 </span>
           <span class="more-meta"> 预计阅读 5 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -155,7 +155,7 @@
         <li><a href="#termux-包管理">termux 包管理</a></li>
         <li><a href="#termux-文件目录">termux 文件目录</a></li>
         <li><a href="#termux-优化设置">termux 优化设置</a></li>
-        <li><a href="#termux-安装常用软件">termux 安装常用软件</a></li>
+        <li><a href="#termux-常用软件">termux 常用软件</a></li>
         <li><a href="#termux-其它应用">termux 其它应用</a></li>
       </ul>
     </li>
@@ -178,7 +178,7 @@
 <ul>
 <li>
 <p>下载安装包并安装</p>
-<p>googleplay 上的版本已不再更新(见<a href="https://wiki.termux.com/wiki/Termux_Google_Play">说明</a>),官方推荐到 <strong>f-droid</strong> <a href="https://f-droid.org/packages/com.termux/">下载</a></p>
+<p>Googleplay 上的版本已不再更新(见<a href="https://wiki.termux.com/wiki/Termux_Google_Play">说明</a>),官方推荐到 <strong>f-droid</strong> <a href="https://f-droid.org/packages/com.termux/">下载</a></p>
 </li>
 <li>
 <p>第一次启动Termux的时候需要从<a href="http://termux.net/bootstrap/">服务器</a>加载数据,如出现提示:</p>
@@ -336,7 +336,7 @@ pkg files &lt;package&gt;             # 显示某个包的相关文件夹路径
 pkg install vim curl wget git tree -y
 </code></pre></td></tr></table>
 </div>
-</div><p><code>pkg</code> 命令每次安装的时候自动执行 apt update 命令，建议使用。如有 deb 包，还可以使用<code>dpkg</code>安装</p>
+</div><p><code>pkg</code> 命令每次安装的时候自动执行 <code>apt update</code> 命令，建议使用。如有 deb 包，还可以使用<code>dpkg</code>安装</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -377,10 +377,10 @@ echo $TMPDIR
 <p>更换国内源</p>
 <ul>
 <li>
-<p><code>termux-change-repo</code>命令替换</p>
+<p>用 <code>termux-change-repo</code> 命令替换</p>
 </li>
 <li>
-<p>命令行替换</p>
+<p>输入以下命令替换</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -401,9 +401,7 @@ apt update &amp;&amp; apt upgrade
 </li>
 <li>
 <p>安装oh-my-zsh</p>
-<p>使用<strong>zsh</strong>替代<strong>bash</strong>，并安装<strong>oh-my-zsh</strong>。脚本项目地址: <a href="https://github.com/Cabbagec/termux-ohmyzsh/">https://github.com/Cabbagec/termux-ohmyzsh/</a></p>
-<ul>
-<li>
+<p>使用 zsh 替代 bash ，并安装 oh-my-zsh 。项目地址: <a href="https://github.com/Cabbagec/termux-ohmyzsh/">https://github.com/Cabbagec/termux-ohmyzsh/</a></p>
 <p>使用脚本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -413,27 +411,12 @@ apt update &amp;&amp; apt upgrade
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sh -c &#34;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&#34;
 </code></pre></td></tr></table>
 </div>
-</div><p>如果因网络原因无法下载，可执行下面命令</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sh -c &#34;$(curl -fsSL https://html.sqlsec.com/termux-install.sh)&#34;
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>弹框确认，允许访问文件。不小心拒绝，使用<code>termux-setup-storage</code> 命令可以重新获取访问权限。</p>
-</li>
-<li>
+</div><p>弹框确认，允许访问文件。不小心拒绝，使用<code>termux-setup-storage</code> 命令可以重新获取访问权限。</p>
 <p>脚本执行后提示设置色彩样式和字体样式</p>
 <blockquote>
 <p>Enter a number, leave blank to not to change: 14 Enter a number, leave blank to not to change: 4</p>
 </blockquote>
 <p>可以用<code>chcolor</code>和<code>chfont</code>命令再次修改色彩和字体</p>
-</li>
-</ul>
 </li>
 <li>
 <p>定制扩展按键</p>
@@ -512,11 +495,10 @@ syntax on
 </div>
 </div></li>
 </ul>
-<h2 id="termux-安装常用软件">termux 安装常用软件</h2>
+<h2 id="termux-常用软件">termux 常用软件</h2>
 <ul>
 <li>
-<p>安装 openssh</p>
-<p><code>pkg install openssh</code></p>
+<p>Openssh  <code>pkg install openssh</code></p>
 <ul>
 <li>
 <p>连接其它服务器</p>
@@ -532,7 +514,7 @@ ssh -i id_rsa user@hostname_or_ip  # ssh -i 私钥 用户名@主机名或者IP
 </div>
 </div></li>
 <li>
-<p>开启 termux 的 ssh 服务</p>
+<p>开启 termux 的 sshd 服务</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1

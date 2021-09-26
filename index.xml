@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LukeIO的一些记录和分享</title>
+    <title>LukeIO&#39;s Blog</title>
     <link>https://lukeio.github.io/</link>
-    <description>Recent content on LukeIO的一些记录和分享</description>
+    <description>Recent content on LukeIO&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 20 Sep 2021 20:19:59 +0000</lastBuildDate><atom:link href="https://lukeio.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -31,7 +31,7 @@
       <pubDate>Mon, 20 Sep 2021 18:10:05 +0000</pubDate>
       
       <guid>https://lukeio.github.io/post/markdown/</guid>
-      <description>标题 一级标题 标题 二级标题 标题 三级标题 段落 : 段落之间空一行 换行符 : 一行结束时输入两个空格 列表项 : 第一项 第二项 第三项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第四项 abcdef opqrst uvwxyz abcdef opqrst</description>
+      <description>Markdown基本格式 标题 1 2 3 # 一级标题 ## 二级标题 ### 三级标题 一级标题 二级标题 三级标题 列表项 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 * 第一项</description>
     </item>
     
   </channel>
