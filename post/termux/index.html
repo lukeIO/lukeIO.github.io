@@ -35,7 +35,7 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="/sass/main.min.b874a8796a492f0d7c86bb24c33cbf052935783a5778ebaf819a8e514bf49f10.css" rel="stylesheet">
+<link href="/sass/main.min.cb68f97bc9cece255d217346d970e3c62623408634e500c330a62fadabbbe77c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Termux">
 <meta itemprop="description" content="参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无"><meta itemprop="datePublished" content="2021-09-20T20:19:59+00:00" />
 <meta itemprop="dateModified" content="2021-09-20T20:19:59+00:00" />
-<meta itemprop="wordCount" content="2167">
+<meta itemprop="wordCount" content="2263">
 <meta itemprop="keywords" content="termux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Termux"/>
 <meta name="twitter:description" content="参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无"/>
@@ -80,7 +80,7 @@
     <a href="/">
         <li class="mobile-menu-item">首页</li>
       </a><a href="/post/">
-        <li class="mobile-menu-item">文档</li>
+        <li class="mobile-menu-item">文章</li>
       </a><a href="/tags/">
         <li class="mobile-menu-item">标签</li>
       </a><a href="/categories/">
@@ -110,7 +110,7 @@
     <li class="menu-item">
         <a class="menu-item-link" href="/">首页</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">文档</a>
+        <a class="menu-item-link" href="/post/">文章</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tags/">标签</a>
       </li><li class="menu-item">
@@ -136,7 +136,7 @@
         <div class="post-category">
             <a href="/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
             </div>
-          <span class="more-meta"> 约 2167 字 </span>
+          <span class="more-meta"> 约 2263 字 </span>
           <span class="more-meta"> 预计阅读 5 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -164,78 +164,114 @@
   </div>
 </div>
     <div class="post-content">
-      <blockquote>
-<p>参考<a href="https://www.sqlsec.com/2018/05/termux.html">Termux 高级终端安装使用配置教程</a>整理</p>
-</blockquote>
+      <p>参考<a href="https://www.sqlsec.com/2018/05/termux.html">Termux 高级终端安装使用配置教程</a>整理</p>
 <h2 id="termux简介">termux简介</h2>
 <blockquote>
 <p>Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。</p>
 </blockquote>
 <ul>
 <li><a href="https://termux.com/">termux官网</a></li>
-<li><a href="https://wiki.termux.com/wiki/Main_Page">termux wiki
-</a></li>
+<li><a href="https://wiki.termux.com/wiki/Main_Page">termux wiki</a></li>
 <li><a href="https://github.com/termux/termux-app">github地址</a></li>
 </ul>
 <h2 id="termux-安装">termux 安装</h2>
 <ul>
-<li><a href="https://f-droid.org/packages/com.termux/">f-droid下载地址</a></li>
-</ul>
+<li>
+<p>下载安装包并安装</p>
+<p>googleplay 上的版本已不再更新(见<a href="https://wiki.termux.com/wiki/Termux_Google_Play">说明</a>),官方推荐到 <strong>f-droid</strong> <a href="https://f-droid.org/packages/com.termux/">下载</a></p>
+</li>
+<li>
+<p>第一次启动Termux的时候需要从<a href="http://termux.net/bootstrap/">服务器</a>加载数据,如出现提示:</p>
 <blockquote>
-<p>googleplay 上的版本已不再更新(见<a href="https://wiki.termux.com/wiki/Termux_Google_Play">说明</a>),官方推荐f-droid 下载</p>
-</blockquote>
-<ul>
-<li>第一次启动Termux的时候需要从<a href="http://termux.net/bootstrap/">服务器</a>加载数据,如出现提示</li>
-</ul>
-<blockquote>
-<p>Ubable to install
-Termux was unable to install the bootstrap packages.
-Check your network connection and try again.</p>
+<p>Ubable to install Termux was unable to install the bootstrap packages.Check your ntwork connection and try again.</p>
 </blockquote>
 <p>需要科学上网。</p>
+</li>
+</ul>
 <h2 id="termux-基本操作">termux 基本操作</h2>
 <ul>
-<li>调整屏幕字体大小，双指捏合或展开</li>
-<li>长按屏幕，会出现菜单项，</li>
-</ul>
-<blockquote>
-<p>copy  paste  more</p>
-<blockquote>
-<p>Select URL   提取屏幕上的链接
-Share transcipt  分享命令
-Reset  重置
-Kill process  结束当前进程
-Style  风格配色
-Keep screen on  屏幕常亮
-help  帮助
-setting  设置</p>
-</blockquote>
-</blockquote>
+<li>
+<p>调整屏幕字体大小，双指捏合或展开</p>
+</li>
+<li>
+<p>长按屏幕，会出现菜单项，</p>
 <ul>
+<li>copy</li>
+<li>paste</li>
+<li>more
+<ul>
+<li>Select URL      # 提取屏幕上的链接</li>
+<li>Share transcipt # 分享命令</li>
+<li>Reset           # 重置</li>
+<li>Kill process    # 结束当前进程</li>
+<li>Style           # 风格配色</li>
+<li>Keep screen on  # 屏幕常亮</li>
+<li>help            # 帮助</li>
+<li>setting         # 设置</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>
 <p>屏幕左上角从左向右滑动，调出菜单，可以新建、切换会话。长按 keyboard 可以打开/关闭输入法工具条（扩展按键）</p>
 </li>
 <li>
 <p>常用快捷键</p>
 <ul>
-<li>termux 中手机<code>音量减</code>键相当于<code>ctrl</code>键，快捷键组合如下</li>
-</ul>
-<blockquote>
-<p>Ctrl + A -&gt; 将光标移动到行首
+<li>
+<p>termux 中手机<strong>音量减</strong>键相当于<strong>Ctrl</strong>键，快捷键组合如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Ctrl + A -&gt; 将光标移动到行首
 Ctrl + C -&gt; 中止当前进程
-Ctrl + D -&gt; 注销终端会话		
+Ctrl + D -&gt; 注销终端会话			
 Ctrl + E -&gt; 将光标移动到行尾
 Ctrl + K -&gt; 从光标删除到行尾
 Ctrl + U -&gt; 从光标删除到行首
 Ctrl + L -&gt; 清除终端
 Ctrl + Z -&gt; 挂起（发送SIGTSTP到）当前进程
-Ctrl + alt + C -&gt; 打开新会话</p>
-</blockquote>
-<ul>
-<li><code>音量加</code>键的组合</li>
-</ul>
-<blockquote>
-<p>音量加 + E -&gt; Esc键
+Ctrl + alt + C -&gt; 打开新会话
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>音量加</strong>键的组合</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">音量加 + E -&gt; Esc键
 音量加 + T -&gt; Tab键
 音量加 + 1 -&gt; F1（音量增加 + 2 → F2…以此类推）
 音量加 + 0 -&gt; F10
@@ -254,8 +290,11 @@ Ctrl + alt + C -&gt; 打开新会话</p>
 音量加 + . -&gt; Ctrl + \（SIGQUIT）
 音量加 + V -&gt; 显示音量控制
 音量加 + Q -&gt; 切换显示的功能键视
-音量加 + K -&gt; 切换显示的功能键视图</p>
-</blockquote>
+音量加 + K -&gt; 切换显示的功能键视图
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
 </li>
 </ul>
 <h2 id="termux-包管理">termux 包管理</h2>
@@ -331,15 +370,17 @@ echo $TMPDIR
 /data/data/com.termux/files/usr/tmp/		
 </code></pre></td></tr></table>
 </div>
-</div><p><code>export</code>显示更多信息</p>
+</div><p><code>export</code>命令显示更多信息</p>
 <h2 id="termux-优化设置">termux 优化设置</h2>
 <ul>
 <li>
 <p>更换国内源</p>
 <ul>
-<li><code>termux-change-repo</code>命令替换</li>
-<li>命令行替换</li>
-</ul>
+<li>
+<p><code>termux-change-repo</code>命令替换</p>
+</li>
+<li>
+<p>命令行替换</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -356,29 +397,47 @@ apt update &amp;&amp; apt upgrade
 </div>
 </div><p>见<a href="https://mirrors.tuna.tsinghua.edu.cn/help/termux/">清华大学开源软件镜像站</a></p>
 </li>
-<li>
-<p>安装oh-my-zsh
-使用<code>zsh</code>替代<code>bash</code>，并安装<code>oh-my-zsh</code>
-脚本项目地址:https://github.com/Cabbagec/termux-ohmyzsh/</p>
-<ul>
-<li>使用脚本
-<code>sh -c &quot;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;</code>
-如果因网络原因无法下载，可执行下面命令
-<code>sh -c &quot;$(curl -fsSL https://html.sqlsec.com/termux-install.sh)&quot;  </code></li>
-<li>弹框确认允许访问文件，不小心点了拒绝，可以执行<code>termux-setup-storage</code>重新获取访问权限</li>
-<li>脚本执行后提示设置色彩样式和字体样式</li>
 </ul>
+</li>
+<li>
+<p>安装oh-my-zsh</p>
+<p>使用<strong>zsh</strong>替代<strong>bash</strong>，并安装<strong>oh-my-zsh</strong>。脚本项目地址: <a href="https://github.com/Cabbagec/termux-ohmyzsh/">https://github.com/Cabbagec/termux-ohmyzsh/</a></p>
+<ul>
+<li>
+<p>使用脚本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sh -c &#34;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>如果因网络原因无法下载，可执行下面命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sh -c &#34;$(curl -fsSL https://html.sqlsec.com/termux-install.sh)&#34;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>弹框确认，允许访问文件。不小心拒绝，使用<code>termux-setup-storage</code> 命令可以重新获取访问权限。</p>
+</li>
+<li>
+<p>脚本执行后提示设置色彩样式和字体样式</p>
 <blockquote>
 <p>Enter a number, leave blank to not to change: 14 Enter a number, leave blank to not to change: 4</p>
 </blockquote>
-<p>可以用<code>chcolor</code>和<code>chfont</code>再次修改色彩和字体</p>
-</li>
-<li>
-<p>定制扩展按键
-通过 <code>~/.termux/termux.properties</code> 文件定制扩展按键,如不存在，需创建<code>vim ~/.termux/termux.properties</code>
-加入以下内容:</p>
+<p>可以用<code>chcolor</code>和<code>chfont</code>命令再次修改色彩和字体</p>
 </li>
 </ul>
+</li>
+<li>
+<p>定制扩展按键</p>
+<p>通过 <code>~/.termux/termux.properties</code> 定制扩展按键，加入以下内容:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -387,87 +446,143 @@ apt update &amp;&amp; apt upgrade
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">extra-keys=[[&#39;ESC&#39;,&#39;|&#39;,&#39;/&#39;,&#39;-&#39;,&#39;HOME&#39;,&#39;UP&#39;,&#39;END&#39;,&#39;PGUP&#39;],[&#39;TAB&#39;,&#39;CTRL&#39;,&#39;ALT&#39;,&#39;DEL&#39;,&#39;LEFT&#39;,&#39;DOWN&#39;,&#39;RIGHT&#39;,&#39;PGDN&#39;]]
 </code></pre></td></tr></table>
 </div>
+</div><p>按键定义</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">|CTRL|CTRL键|ALT|ALT键|FN|功能键|
+|ESC|退出键|TAB|表格键|HOME|原位键|
+|END|结尾键|PGUP|上翻页键|PGDN|下翻页键|
+|INS|插入键|DEL|删除键|BKSP|退格键|
+|UP |方向键上|LEFT|方向键左|RIGHT|方向键右|
+|DOWN|方向键下|ENTER|回车键|BACKSLASH|反斜杠\|
+|QUOTE|双引号键|APOSTROPHE|单引号键|F1~F12|F1-F12按键|
+</code></pre></td></tr></table>
+</div>
 </div><p>重启 termux 生效</p>
-<p>按键	说明</p>
-<blockquote>
-<p>CTRL	特殊按键  ALT	特殊按键  FN	特殊按键  ESC	退出键  TAB	表格键  HOME	原位键  END	结尾键   PGUP	上翻页键  PGDN	下翻页键  INS	插入键  DEL	删除键  BKSP	退格键  UP	方向键上  LEFT	方向键左  RIGHT	方向键右  DOWN	方向键下  ENTER	回车键  BACKSLASH	反斜杠 \  QUOTE	双引号键  APOSTROPHE	单引号键  F1~F12	F1-F12按键</p>
-</blockquote>
-<ul>
-<li>
-<p>安装autosuggestions插件
-自动提示接下来可能要输入的命令，提高效率。
-下载:
-<code>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</code>
-修改配置，<code>vim ~/.zshrc</code>， 修改下面的选项
-<code>plugins=(git zsh-autosuggestions)</code>
-输入<code>zsh</code>使配置生效</p>
 </li>
 <li>
-<p>修改启动问候语
-<code>vim $PREFIX/etc/motd</code></p>
+<p>安装autosuggestions插件</p>
+<p>自动提示接下来可能要输入的命令，提高效率。下载:</p>
+<p><code>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</code></p>
+<p>修改配置 <code>~/.zshrc</code> 中的选项</p>
+<p><code>plugins=(git zsh-autosuggestions)</code></p>
+<p>输入<code>zsh</code>使配置生效</p>
 </li>
 <li>
-<p>vim 设置优化</p>
-<ul>
-<li>在~目录下,新建.vimrc文件</li>
-</ul>
-<blockquote>
-<p>&ldquo;解决中文乱码
+<p>修改启动问候语</p>
+<p><code>vim $PREFIX/etc/motd</code></p>
+</li>
+<li>
+<p>vim 设置优化
+在 <code>~/.vimrc</code> 文件中修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&#34;解决中文乱码
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set enc=utf8
 set fencs=utf8,gbk,gb2312,gb18030
-&ldquo;显示行号
+&#34;显示行号
 set nu
-&ldquo;颜色主题
+&#34;颜色主题
 colorscheme desert
-&ldquo;打开语法高亮
-syntax on</p>
-</blockquote>
-</li>
+&#34;打开语法高亮
+syntax on
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <h2 id="termux-安装常用软件">termux 安装常用软件</h2>
 <ul>
 <li>
-<p>安装 openssh
-<code>pkg install openssh</code></p>
+<p>安装 openssh</p>
+<p><code>pkg install openssh</code></p>
 <ul>
-<li>连接其它服务器</li>
-</ul>
-<blockquote>
-<p>ssh -p 端口号 用户名@主机名或者IP
-ssh -i 私钥 用户名@主机名或者IP</p>
-</blockquote>
-<ul>
-<li>开启 termux 的 ssh 服务
-默认端口 8022，开启<code>sshd</code>,关闭<code>pkill sshd</code>,Termux 下的 SSH 默认配置文件的路径为 <code>$PREFIX/etc/ssh/sshd_config</code></li>
-</ul>
-<blockquote>
-<p>PrintMotd yes
+<li>
+<p>连接其它服务器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ssh -p 22 user@hostname_or_ip      # ssh -p 端口号 用户名@主机名或者IP
+ssh -i id_rsa user@hostname_or_ip  # ssh -i 私钥 用户名@主机名或者IP
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>开启 termux 的 ssh 服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sshd        #开启服务
+pkill sshd  #关闭服务
+</code></pre></td></tr></table>
+</div>
+</div><p>Termux 下的 SSH 默认端口为8022，配置文件位于 <code>$PREFIX/etc/ssh/sshd_config</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">PrintMotd yes
 PasswordAuthentication yes
-Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server</p>
-</blockquote>
-<p>修改密码<code>paswd</code>后可以用密码登录</p>
-<ul>
-<li>通过密钥对连接
-生成密钥对
-<code>ssh-keygen</code>
-在 ~/.ssh 目录下生成 3 个文件
-<code>id_rsa</code>(私钥)，<code>id_rsa.pub</code>(公钥)，<code>known_hosts</code>,
-将公钥复制到 .ssh/ 目录下的<code>authorized_keys</code>中
-<code>cat id_rsa.pub &gt; authorized_keys</code>
-修改ssh配置
-<code>vim $PREFIX/etc/ssh/sshd_config</code></li>
+Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server
+</code></pre></td></tr></table>
+</div>
+</div><p>用<code>paswd</code>命令修改用户密码后就可以使用密码登录SSH</p>
+</li>
+<li>
+<p>通过密钥对连接</p>
+<p>生成密钥对</p>
+<p><code>ssh-keygen</code></p>
+<p>在 ~/.ssh 目录下生成 3 个文件 <code>id_rsa</code>(私钥)、<code>id_rsa.pub</code>(公钥)、<code>known_hosts</code>，将公钥内容复制到 <code>.ssh/</code> 目录下的 <code>authorized_keys </code>中</p>
+<p><code>cat id_rsa.pub &gt; authorized_keys</code></p>
+<p>修改ssh配置</p>
+<p><code>vim $PREFIX/etc/ssh/sshd_config</code></p>
+<p><code>PasswordAuthentication no</code></p>
+<p>重启ssh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkill sshd
+sshd
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
-<blockquote>
-<p>PasswordAuthentication no</p>
-</blockquote>
-<p>重启ssh
-<code>pkill sshd</code> <code>sshd</code></p>
 </li>
 <li>
 <p>娱乐一下</p>
-</li>
-</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -481,21 +596,23 @@ Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server</p>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cmatrix    # 《黑客帝国》的代码雨视觉特效
-cowsay    # 用 ASCII 字符描绘牛，羊和许多其他动物
-figlet    # 创建 ASCII logo
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cmatrix      # 《黑客帝国》的代码雨视觉特效
+cowsay       # 用 ASCII 字符描绘牛，羊和许多其他动物
+figlet       # 创建 ASCII logo
 hollywood    # 终端中伪造黑客屏幕，假装是黑客
-nyancat    # 彩虹猫
-sl    # ls输错，火车来了
-toilet    # 用字母拼写出更大字母的工具
+nyancat      # 彩虹猫
+sl           # ls输错，火车来了
+toilet       # 用字母拼写出更大字母的工具
+screenfetch/neofetch       # 显示系统信息
 `echo &#34;xxxxx&#34; |curl -F-=\&lt;- qrenco.de`  # 生成二维码
-screenfetch/neofetch    # 显示系统信息
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="termux-其它应用">termux 其它应用</h2>
-<ul>
-<li>搭建 hexo</li>
+</div></li>
 </ul>
+<h2 id="termux-其它应用">termux 其它应用</h2>
+<ul>
+<li>
+<p>搭建 hexo</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -519,9 +636,9 @@ hexo s
 </code></pre></td></tr></table>
 </div>
 </div><p>默认访问地址 http://localhost:4000</p>
-<ul>
-<li>搭建hugo</li>
-</ul>
+</li>
+<li>
+<p>搭建hugo</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -541,10 +658,10 @@ hugo server -D
 </code></pre></td></tr></table>
 </div>
 </div><p>默认访问地址 http://localhost:1313</p>
-<ul>
-<li>安装 linux 发行版
-使用官方工具<a href="https://github.com/termux/proot-distro">proot-distro</a>安装 linux</li>
-</ul>
+</li>
+<li>
+<p>安装 linux 发行版
+使用官方工具<a href="https://github.com/termux/proot-distro">proot-distro</a>安装 linux</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -553,7 +670,9 @@ hugo server -D
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkg install proot-distro
 </code></pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ul>
+
     </div>
 
     <div class="post-copyright">
