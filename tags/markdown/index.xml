@@ -1,20 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>markdown on LukeIO&#39;s Blog</title>
-    <link>https://lukeio.github.io/tags/markdown/</link>
-    <description>Recent content in markdown on LukeIO&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 20 Sep 2021 18:10:05 +0000</lastBuildDate><atom:link href="https://lukeio.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>markdown</title>
-      <link>https://lukeio.github.io/post/markdown/</link>
-      <pubDate>Mon, 20 Sep 2021 18:10:05 +0000</pubDate>
-      
-      <guid>https://lukeio.github.io/post/markdown/</guid>
-      <description>Markdown基本格式 标题 1 2 3 # 一级标题 ## 二级标题 ### 三级标题 一级标题 二级标题 三级标题 列表项 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 * 第一项</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>markdown - 标签 - LukeIO&#39;s Blog</title>
+        <link>https://lukeio.github.io/tags/markdown/</link>
+        <description>markdown - 标签 - LukeIO&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 20 Sep 2021 18:10:05 &#43;0000</lastBuildDate><atom:link href="https://lukeio.github.io/tags/markdown/" rel="self" type="application/rss+xml" /><item>
+    <title>markdown</title>
+    <link>https://lukeio.github.io/markdown/</link>
+    <pubDate>Mon, 20 Sep 2021 18:10:05 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://lukeio.github.io/markdown/</guid>
+    <description><![CDATA[Markdown基本格式 标题 1 2 3 # 一级标题 ## 二级标题 ### 三级标题 一级标题 二级标题 三级标题 列表项 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 * 第一项]]></description>
+</item></channel>
 </rss>

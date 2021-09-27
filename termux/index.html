@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Termux - LukeIO&#39;s Blog</title><meta name="Description" content="LukeIO的一些记录和分享"><meta property="og:title" content="Termux" />
+<meta property="og:description" content="参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lukeio.github.io/termux/" /><meta property="og:image" content="https://lukeio.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-20T20:19:59+00:00" />
+<meta property="article:modified_time" content="2021-09-20T20:19:59+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://lukeio.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Termux"/>
+<meta name="twitter:description" content="参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无"/>
+<meta name="application-name" content="LukeIO">
+<meta name="apple-mobile-web-app-title" content="LukeIO"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://lukeio.github.io/termux/" /><link rel="prev" href="https://lukeio.github.io/markdown/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Termux",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/lukeio.github.io\/termux\/"
+        },"image": ["https:\/\/lukeio.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "termux","wordcount":  2206 ,
+        "url": "https:\/\/lukeio.github.io\/termux\/","datePublished": "2021-09-20T20:19:59+00:00","dateModified": "2021-09-20T20:19:59+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/lukeio.github.io\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "LukeIO"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="LukeIO&#39;s Blog"><span class="header-title-pre"><i class='fas fa-map-signs fa-fw'></i></span>LukeIO</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="LukeIO&#39;s Blog"><span class="header-title-pre"><i class='fas fa-map-signs fa-fw'></i></span>LukeIO</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Termux</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>LukeIO</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw"></i>学习</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-20 Mon">2021-09-20 Mon</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2206 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/termux/" class="leancloud_visitors" data-flag-title="Termux">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#termux简介">termux简介</a></li>
+    <li><a href="#termux-安装">termux 安装</a></li>
+    <li><a href="#termux-基本操作">termux 基本操作</a></li>
+    <li><a href="#termux-包管理">termux 包管理</a></li>
+    <li><a href="#termux-文件目录">termux 文件目录</a></li>
+    <li><a href="#termux-优化设置">termux 优化设置</a></li>
+    <li><a href="#termux-常用软件">termux 常用软件</a></li>
+    <li><a href="#termux-其它应用">termux 其它应用</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>参考<a href="https://www.sqlsec.com/2018/05/termux.html" target="_blank" rel="noopener noreffer">Termux 高级终端安装使用配置教程</a>整理</p>
+<h2 id="termux简介">termux简介</h2>
+<blockquote>
+<p>Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。</p>
+</blockquote>
+<ul>
+<li><a href="https://termux.com/" target="_blank" rel="noopener noreffer">termux官网</a></li>
+<li><a href="https://wiki.termux.com/wiki/Main_Page" target="_blank" rel="noopener noreffer">termux wiki</a></li>
+<li><a href="https://github.com/termux/termux-app" target="_blank" rel="noopener noreffer">github地址</a></li>
+</ul>
+<h2 id="termux-安装">termux 安装</h2>
+<ul>
+<li>
+<p>下载安装包并安装</p>
+<p>Googleplay 上的版本已不再更新(见<a href="https://wiki.termux.com/wiki/Termux_Google_Play" target="_blank" rel="noopener noreffer">说明</a>),官方推荐到 <strong>f-droid</strong> <a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener noreffer">下载</a></p>
+</li>
+<li>
+<p>第一次启动Termux的时候需要从<a href="http://termux.net/bootstrap/" target="_blank" rel="noopener noreffer">服务器</a>加载数据,如出现提示:</p>
+<blockquote>
+<p>Ubable to install Termux was unable to install the bootstrap packages.Check your ntwork connection and try again.</p>
+</blockquote>
+<p>需要科学上网。</p>
+</li>
+</ul>
+<h2 id="termux-基本操作">termux 基本操作</h2>
+<ul>
+<li>
+<p>调整屏幕字体大小，双指捏合或展开</p>
+</li>
+<li>
+<p>长按屏幕，会出现菜单项，</p>
+<ul>
+<li>copy</li>
+<li>paste</li>
+<li>more
+<ul>
+<li>Select URL      # 提取屏幕上的链接</li>
+<li>Share transcipt # 分享命令</li>
+<li>Reset           # 重置</li>
+<li>Kill process    # 结束当前进程</li>
+<li>Style           # 风格配色</li>
+<li>Keep screen on  # 屏幕常亮</li>
+<li>help            # 帮助</li>
+<li>setting         # 设置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>屏幕左上角从左向右滑动，调出菜单，可以新建、切换会话。长按 keyboard 可以打开/关闭输入法工具条（扩展按键）</p>
+</li>
+<li>
+<p>常用快捷键</p>
+<ul>
+<li>
+<p>termux 中手机<strong>音量减</strong>键相当于<strong>Ctrl</strong>键，快捷键组合如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Ctrl + A -&gt; 将光标移动到行首
+Ctrl + C -&gt; 中止当前进程
+Ctrl + D -&gt; 注销终端会话			
+Ctrl + E -&gt; 将光标移动到行尾
+Ctrl + K -&gt; 从光标删除到行尾
+Ctrl + U -&gt; 从光标删除到行首
+Ctrl + L -&gt; 清除终端
+Ctrl + Z -&gt; 挂起（发送SIGTSTP到）当前进程
+Ctrl + alt + C -&gt; 打开新会话
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>音量加</strong>键的组合</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">音量加 + E -&gt; Esc键
+音量加 + T -&gt; Tab键
+音量加 + 1 -&gt; F1（音量增加 + 2 → F2…以此类推）
+音量加 + 0 -&gt; F10
+音量加 + B -&gt; Alt + B，使用readline时返回一个单词
+音量加 + F -&gt; Alt + F，使用readline时转发一个单词
+音量加 + X -&gt; Alt+X
+音量加 + W -&gt; 向上箭头键
+音量加 + A -&gt; 向左箭头键
+音量加 + S -&gt; 向下箭头键
+音量加 + D -&gt; 向右箭头键
+音量加 + L -&gt; | （管道字符）
+音量加 + H -&gt; 〜（波浪号字符）
+音量加 + U -&gt; _ (下划线字符)
+音量加 + P -&gt; 上一页
+音量加 + N -&gt; 下一页
+音量加 + . -&gt; Ctrl + \（SIGQUIT）
+音量加 + V -&gt; 显示音量控制
+音量加 + Q -&gt; 切换显示的功能键视
+音量加 + K -&gt; 切换显示的功能键视图
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+<h2 id="termux-包管理">termux 包管理</h2>
+<p>termux 支持<code>pkg</code>和<code>apt</code>，<code>pkg</code>兼容<code>apt</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkg search &lt;query&gt;              # 搜索包
+pkg install &lt;package&gt;           # 安装包
+pkg uninstall &lt;package&gt;         # 卸载包
+pkg reinstall &lt;package&gt;         # 重新安装包
+pkg update                      # 更新源
+pkg upgrade                     # 升级软件包
+pkg list-all                    # 列出可供安装所有包
+pkg list-installed              # 列出已经安装的包
+pkg show &lt;package&gt;              # 显示某个包的详细信息
+pkg files &lt;package&gt;             # 显示某个包的相关文件夹路径	
+</code></pre></td></tr></table>
+</div>
+</div><p>安装几个基础应用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkg update
+pkg install vim curl wget git tree -y
+</code></pre></td></tr></table>
+</div>
+</div><p><code>pkg</code> 命令每次安装的时候自动执行 <code>apt update</code> 命令，建议使用。如有 deb 包，还可以使用<code>dpkg</code>安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="nx">dpkg</span> <span class="o">-</span><span class="nx">i</span> <span class="p">.</span><span class="o">/</span><span class="kn">package</span><span class="p">.</span><span class="nx">deb</span>        <span class="err">#</span> <span class="nx">安装</span> <span class="nx">deb</span> <span class="nx">包</span>
+<span class="nx">dpkg</span> <span class="o">--</span><span class="nx">remove</span> <span class="p">[</span><span class="kn">package</span> <span class="nx">name</span><span class="p">]</span> <span class="err">#</span> <span class="nx">卸载软件包</span>
+<span class="nx">dpkg</span> <span class="o">-</span><span class="nx">l</span>                      <span class="err">#</span> <span class="nx">查看已安装的包</span>
+<span class="nx">man</span> <span class="nx">dpkg</span>                     <span class="err">#</span> <span class="nx">查看详细文档</span>	
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="termux-文件目录">termux 文件目录</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">echo $HOME
+/data/data/com.termux/files/home
+echo $PREFIX
+/data/data/com.termux/files/usr
+echo $TMPDIR
+/data/data/com.termux/files/usr/tmp/		
+</code></pre></td></tr></table>
+</div>
+</div><p><code>export</code>命令显示更多信息</p>
+<h2 id="termux-优化设置">termux 优化设置</h2>
+<ul>
+<li>
+<p>更换国内源</p>
+<ul>
+<li>
+<p>用 <code>termux-change-repo</code> 命令替换</p>
+</li>
+<li>
+<p>输入以下命令替换</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sed -i &#39;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@&#39; $PREFIX/etc/apt/sources.list
+sed -i &#39;s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@&#39; $PREFIX/etc/apt/sources.list.d/game.list
+sed -i &#39;s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@&#39; $PREFIX/etc/apt/sources.list.d/science.list
+apt update &amp;&amp; apt upgrade
+</code></pre></td></tr></table>
+</div>
+</div><p>见<a href="https://mirrors.tuna.tsinghua.edu.cn/help/termux/" target="_blank" rel="noopener noreffer">清华大学开源软件镜像站</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>安装oh-my-zsh</p>
+<p>使用 zsh 替代 bash ，并安装 oh-my-zsh 。项目地址: <a href="https://github.com/Cabbagec/termux-ohmyzsh/" target="_blank" rel="noopener noreffer">https://github.com/Cabbagec/termux-ohmyzsh/</a></p>
+<p>使用脚本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sh -c &#34;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>弹框确认，允许访问文件。不小心拒绝，使用<code>termux-setup-storage</code> 命令可以重新获取访问权限。</p>
+<p>脚本执行后提示设置色彩样式和字体样式</p>
+<blockquote>
+<p>Enter a number, leave blank to not to change: 14 Enter a number, leave blank to not to change: 4</p>
+</blockquote>
+<p>可以用<code>chcolor</code>和<code>chfont</code>命令再次修改色彩和字体</p>
+</li>
+<li>
+<p>定制扩展按键</p>
+<p>通过 <code>~/.termux/termux.properties</code> 定制扩展按键，加入以下内容:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">extra-keys=[[&#39;ESC&#39;,&#39;|&#39;,&#39;/&#39;,&#39;-&#39;,&#39;HOME&#39;,&#39;UP&#39;,&#39;END&#39;,&#39;PGUP&#39;],[&#39;TAB&#39;,&#39;CTRL&#39;,&#39;ALT&#39;,&#39;DEL&#39;,&#39;LEFT&#39;,&#39;DOWN&#39;,&#39;RIGHT&#39;,&#39;PGDN&#39;]]
+</code></pre></td></tr></table>
+</div>
+</div><p>按键定义</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">|CTRL|CTRL键|ALT|ALT键|FN|功能键|
+|ESC|退出键|TAB|表格键|HOME|原位键|
+|END|结尾键|PGUP|上翻页键|PGDN|下翻页键|
+|INS|插入键|DEL|删除键|BKSP|退格键|
+|UP |方向键上|LEFT|方向键左|RIGHT|方向键右|
+|DOWN|方向键下|ENTER|回车键|BACKSLASH|反斜杠\|
+|QUOTE|双引号键|APOSTROPHE|单引号键|F1~F12|F1-F12按键|
+</code></pre></td></tr></table>
+</div>
+</div><p>重启 termux 生效</p>
+</li>
+<li>
+<p>安装autosuggestions插件</p>
+<p>自动提示接下来可能要输入的命令，提高效率。下载:</p>
+<p><code>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</code></p>
+<p>修改配置 <code>~/.zshrc</code> 中的选项</p>
+<p><code>plugins=(git zsh-autosuggestions)</code></p>
+<p>输入<code>zsh</code>使配置生效</p>
+</li>
+<li>
+<p>修改启动问候语</p>
+<p><code>vim $PREFIX/etc/motd</code></p>
+</li>
+<li>
+<p>vim 设置优化
+在 <code>~/.vimrc</code> 文件中修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&#34;解决中文乱码
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf8
+set fencs=utf8,gbk,gb2312,gb18030
+&#34;显示行号
+set nu
+&#34;颜色主题
+colorscheme desert
+&#34;打开语法高亮
+syntax on
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="termux-常用软件">termux 常用软件</h2>
+<ul>
+<li>
+<p>Openssh  <code>pkg install openssh</code></p>
+<ul>
+<li>
+<p>连接其它服务器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ssh -p 22 user@hostname_or_ip      # ssh -p 端口号 用户名@主机名或者IP
+ssh -i id_rsa user@hostname_or_ip  # ssh -i 私钥 用户名@主机名或者IP
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>开启 termux 的 sshd 服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sshd        #开启服务
+pkill sshd  #关闭服务
+</code></pre></td></tr></table>
+</div>
+</div><p>Termux 下的 SSH 默认端口为8022，配置文件位于 <code>$PREFIX/etc/ssh/sshd_config</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">PrintMotd yes
+PasswordAuthentication yes
+Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server
+</code></pre></td></tr></table>
+</div>
+</div><p>用<code>paswd</code>命令修改用户密码后就可以使用密码登录SSH</p>
+</li>
+<li>
+<p>通过密钥对连接</p>
+<p>生成密钥对</p>
+<p><code>ssh-keygen</code></p>
+<p>在 ~/.ssh 目录下生成 3 个文件 <code>id_rsa</code>(私钥)、<code>id_rsa.pub</code>(公钥)、<code>known_hosts</code>，将公钥内容复制到 <code>.ssh/</code> 目录下的 <code>authorized_keys </code>中</p>
+<p><code>cat id_rsa.pub &gt; authorized_keys</code></p>
+<p>修改ssh配置</p>
+<p><code>vim $PREFIX/etc/ssh/sshd_config</code></p>
+<p><code>PasswordAuthentication no</code></p>
+<p>重启ssh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkill sshd
+sshd
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>娱乐一下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cmatrix      # 《黑客帝国》的代码雨视觉特效
+cowsay       # 用 ASCII 字符描绘牛，羊和许多其他动物
+figlet       # 创建 ASCII logo
+hollywood    # 终端中伪造黑客屏幕，假装是黑客
+nyancat      # 彩虹猫
+sl           # ls输错，火车来了
+toilet       # 用字母拼写出更大字母的工具
+screenfetch/neofetch       # 显示系统信息
+`echo &#34;xxxxx&#34; |curl -F-=\&lt;- qrenco.de`  # 生成二维码
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="termux-其它应用">termux 其它应用</h2>
+<ul>
+<li>
+<p>搭建 hexo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkg install nodejs-lts
+npm install hexo-cli -g
+hexo init myblog_hexo
+cd myblog_hexo
+npm install hexo-theme-fluid
+cp node_modules/hexo-theme-fluid/_config.yml _config.fluid.yml
+hexo g
+hexo s					
+</code></pre></td></tr></table>
+</div>
+</div><p>默认访问地址 http://localhost:4000</p>
+</li>
+<li>
+<p>搭建hugo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkg install hugo -y
+hugo new site myblog_hugo
+cd myblog_hugo
+git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+cp themes/even/exampleSite/config.toml ./
+hugo server -D
+</code></pre></td></tr></table>
+</div>
+</div><p>默认访问地址 http://localhost:1313</p>
+</li>
+<li>
+<p>安装 linux 发行版
+使用官方工具<a href="https://github.com/termux/proot-distro" target="_blank" rel="noopener noreffer">proot-distro</a>安装 linux</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkg install proot-distro
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-09-20 Mon</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/termux/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/termux/">termux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/markdown/" class="prev" rel="prev" title="markdown"><i class="fas fa-angle-left fa-fw"></i>markdown</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">LukeIO</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"","appKey":"","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"","algoliaIndex":"index.zh-cn","algoliaSearchKey":"","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
