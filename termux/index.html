@@ -8,19 +8,19 @@
         <title>Termux - LukeIO&#39;s Blog</title><meta name="Description" content="LukeIO的一些记录和分享"><meta property="og:title" content="Termux" />
 <meta property="og:description" content="参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lukeio.github.io/termux/" /><meta property="og:image" content="https://lukeio.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://lukeio.github.io/termux/" /><meta property="og:image" content="https://lukeio.github.io/images/avatar.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-09-20T20:19:59+00:00" />
 <meta property="article:modified_time" content="2021-09-20T20:19:59+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://lukeio.github.io/logo.png"/>
+<meta name="twitter:image" content="https://lukeio.github.io/images/avatar.png"/>
 
 <meta name="twitter:title" content="Termux"/>
 <meta name="twitter:description" content="参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无"/>
 <meta name="application-name" content="LukeIO">
 <meta name="apple-mobile-web-app-title" content="LukeIO"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://lukeio.github.io/termux/" /><link rel="prev" href="https://lukeio.github.io/markdown/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://lukeio.github.io/termux/" /><link rel="prev" href="https://lukeio.github.io/markdown/" /><link rel="next" href="https://lukeio.github.io/n1-openwrt%E8%AE%BE%E7%BD%AE/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -32,7 +32,7 @@
         },"image": ["https:\/\/lukeio.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "termux","wordcount":  2206 ,
         "url": "https:\/\/lukeio.github.io\/termux\/","datePublished": "2021-09-20T20:19:59+00:00","dateModified": "2021-09-20T20:19:59+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
-            "name": "xxxx","logo": "https:\/\/lukeio.github.io\/images\/avatar.png"},"author": {
+            "name": "LukeIO","logo": "https:\/\/lukeio.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
                 "name": "LukeIO"
             },"description": ""
@@ -115,14 +115,18 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#termux简介">termux简介</a></li>
-    <li><a href="#termux-安装">termux 安装</a></li>
-    <li><a href="#termux-基本操作">termux 基本操作</a></li>
-    <li><a href="#termux-包管理">termux 包管理</a></li>
-    <li><a href="#termux-文件目录">termux 文件目录</a></li>
-    <li><a href="#termux-优化设置">termux 优化设置</a></li>
-    <li><a href="#termux-常用软件">termux 常用软件</a></li>
-    <li><a href="#termux-其它应用">termux 其它应用</a></li>
+    <li>
+      <ul>
+        <li><a href="#termux简介">termux简介</a></li>
+        <li><a href="#termux-安装">termux 安装</a></li>
+        <li><a href="#termux-基本操作">termux 基本操作</a></li>
+        <li><a href="#termux-包管理">termux 包管理</a></li>
+        <li><a href="#termux-文件目录">termux 文件目录</a></li>
+        <li><a href="#termux-优化设置">termux 优化设置</a></li>
+        <li><a href="#termux-常用软件">termux 常用软件</a></li>
+        <li><a href="#termux-其它应用">termux 其它应用</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>参考<a href="https://www.sqlsec.com/2018/05/termux.html" target="_blank" rel="noopener noreffer">Termux 高级终端安装使用配置教程</a>整理</p>
@@ -640,7 +644,8 @@ hugo server -D
         </section>
     </div>
 
-    <div class="post-nav"><a href="/markdown/" class="prev" rel="prev" title="markdown"><i class="fas fa-angle-left fa-fw"></i>markdown</a></div>
+    <div class="post-nav"><a href="/markdown/" class="prev" rel="prev" title="markdown"><i class="fas fa-angle-left fa-fw"></i>markdown</a>
+            <a href="/n1-openwrt%E8%AE%BE%E7%BD%AE/" class="next" rel="next" title="N1 Openwrt设置">N1 Openwrt设置<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
