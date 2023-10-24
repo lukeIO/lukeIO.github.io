@@ -9,6 +9,6 @@
     <pubDate>Wed, 29 Sep 2021 03:45:59 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://lukeio.github.io/2021/09/n1-openwrt%E8%AE%BE%E7%BD%AE/</guid>
-    <description><![CDATA[固体介绍 Phicomm N1的 Openwrt 固件，见作者的发布页，以下设置基于60+o版本。 网络 接口》LAN 口 地址 192.168.1.2 子网掩码 255.255.255.0 网关 192.168.1.1 广播 192.168.1.255 自定义 DNS 1 2 3 218.30.19.40 223.5.5.5 119.29.29.29 物理设置]]></description>
+    <description><![CDATA[固体介绍 Phicomm N1的 Openwrt 固件，见作者的发布页，以下设置基于60+o版本。 网络 接口》LAN 口 地址 192.168.1.2 子网掩码 255.255.255.0 网关 192.168.1.1 广播 192.168.1.255 自定义 DNS 1 2 3 x.x.x.x 223.5.5.5 119.29.29.29 物理设置]]></description>
 </item></channel>
 </rss>

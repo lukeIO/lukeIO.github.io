@@ -18,7 +18,7 @@ Phicomm N1的 Openwrt 固件，见作者的[发布页](https://www.right.com.cn/
 
 * 自定义 DNS
   ```
-  218.30.19.40
+  x.x.x.x
   223.5.5.5
   119.29.29.29
   ```
@@ -187,7 +187,7 @@ docker run --name adguardhome \
 * adguardhome 设置：
   上游 DNS 服务器 Bootstrap DNS 服务器 
   ```
-  218.30.19.40
+  x.x.x.x
   223.5.5.5
   119.29.29.29
   ```
