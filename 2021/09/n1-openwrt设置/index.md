@@ -89,9 +89,6 @@ sda1 3 分钟
 
 * 设备名称 N1 路由器 
 
-## UPnP
-启用
-
 ## Docker CE 
 * 修改配置文件`/etc/docker/daemon.json`
 
