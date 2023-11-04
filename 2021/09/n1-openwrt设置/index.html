@@ -11,6 +11,7 @@
 <meta property="og:url" content="https://lukeio.github.io/2021/09/n1-openwrt%E8%AE%BE%E7%BD%AE/" /><meta property="og:image" content="https://lukeio.github.io/images/avatar.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-09-29T03:45:59+00:00" />
 <meta property="article:modified_time" content="2021-09-29T03:45:59+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://lukeio.github.io/images/avatar.png"/>
 
@@ -306,16 +307,16 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker pull portainer/portainer:linux-arm64
-</span></span><span class="line"><span class="cl">docker volume create portainer_data
-</span></span><span class="line"><span class="cl">docker run -d \
-</span></span><span class="line"><span class="cl">--name=Portainer \
-</span></span><span class="line"><span class="cl">--restart always \
-</span></span><span class="line"><span class="cl">-e TZ=Asia/Shanghai \
-</span></span><span class="line"><span class="cl">-p 9999:9000 \
-</span></span><span class="line"><span class="cl">-v /var/run/docker.sock:/var/run/docker.sock \
-</span></span><span class="line"><span class="cl">-v portainer_data:/data \
-</span></span><span class="line"><span class="cl">portainer/portainer:linux-arm64 
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">pull</span> <span class="n">portainer</span><span class="o">/</span><span class="n">portainer</span><span class="p">:</span><span class="n">linux</span><span class="o">-</span><span class="n">arm64</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">volume</span> <span class="n">create</span> <span class="n">portainer_data</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">Portainer</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">restart</span> <span class="n">always</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">TZ</span><span class="o">=</span><span class="n">Asia</span><span class="o">/</span><span class="n">Shanghai</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">p</span> <span class="mi">9999</span><span class="p">:</span><span class="mi">9000</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span><span class="p">:</span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="n">portainer_data</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> \
+</span></span><span class="line"><span class="cl"><span class="n">portainer</span><span class="o">/</span><span class="n">portainer</span><span class="p">:</span><span class="n">linux</span><span class="o">-</span><span class="n">arm64</span> 
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="安装荒野无灯-filebrowser">安装荒野无灯 filebrowser</h3>
@@ -334,17 +335,17 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker pull 80x86/filebrowser:arm64
-</span></span><span class="line"><span class="cl">mkdir /var/lib/filebrowser
-</span></span><span class="line"><span class="cl">docker run -it -d \
-</span></span><span class="line"><span class="cl">--restart always \
-</span></span><span class="line"><span class="cl">--name filebrowser \
-</span></span><span class="line"><span class="cl">--net=host \
-</span></span><span class="line"><span class="cl">-e SSL=on -e PUID=1000 -e PGID=100 -e WEB_PORT=8091 \
-</span></span><span class="line"><span class="cl">-v /var/lib/filebrowser:/config \
-</span></span><span class="line"><span class="cl">-v /mnt/sda1:/myfiles \
-</span></span><span class="line"><span class="cl">--mount type=tmpfs,destination=/tmp \
-</span></span><span class="line"><span class="cl">80x86/filebrowser:arm64
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">pull</span> <span class="mi">80</span><span class="n">x86</span><span class="o">/</span><span class="n">filebrowser</span><span class="p">:</span><span class="n">arm64</span>
+</span></span><span class="line"><span class="cl"><span class="n">mkdir</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">filebrowser</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="o">-</span><span class="n">d</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">restart</span> <span class="n">always</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">name</span> <span class="n">filebrowser</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">host</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">SSL</span><span class="o">=</span><span class="n">on</span> <span class="o">-</span><span class="n">e</span> <span class="n">PUID</span><span class="o">=</span><span class="mi">1000</span> <span class="o">-</span><span class="n">e</span> <span class="n">PGID</span><span class="o">=</span><span class="mi">100</span> <span class="o">-</span><span class="n">e</span> <span class="n">WEB_PORT</span><span class="o">=</span><span class="mi">8091</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">filebrowser</span><span class="p">:</span><span class="o">/</span><span class="n">config</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">sda1</span><span class="p">:</span><span class="o">/</span><span class="n">myfiles</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">mount</span> <span class="n">type</span><span class="o">=</span><span class="n">tmpfs</span><span class="p">,</span><span class="n">destination</span><span class="o">=/</span><span class="n">tmp</span> \
+</span></span><span class="line"><span class="cl"><span class="mi">80</span><span class="n">x86</span><span class="o">/</span><span class="n">filebrowser</span><span class="p">:</span><span class="n">arm64</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="安装荒野无灯-qbittorrent">安装荒野无灯 qbittorrent</h3>
@@ -367,21 +368,21 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker pull 80x86/qbittorrent:4.2.5-focal-20200423-arm64-nova
-</span></span><span class="line"><span class="cl">mkdir -p /var/lib/qbittorrent/config
-</span></span><span class="line"><span class="cl">mkdir -p /var/lib/qbittorrent/data
-</span></span><span class="line"><span class="cl">docker run -d --name qbittorrent \
-</span></span><span class="line"><span class="cl">-e PUID=1000 \
-</span></span><span class="line"><span class="cl">-e PGID=100 \
-</span></span><span class="line"><span class="cl">-e WEB_PORT=8099 \
-</span></span><span class="line"><span class="cl">-e BT_PORT=18099 \
-</span></span><span class="line"><span class="cl">-e TZ=Asia/Shanghai \
-</span></span><span class="line"><span class="cl">--restart=always \
-</span></span><span class="line"><span class="cl">-p 8099:8099 -p 18099:18099/tcp -p 18099:18099/udp \
-</span></span><span class="line"><span class="cl">-v /var/lib/qbittorrent/config/:/config \
-</span></span><span class="line"><span class="cl">-v /var/lib/qbittorrent/data/:/data \
-</span></span><span class="line"><span class="cl">-v /mnt/sda1/N1_Download/qBittorrent/:/downloads \
-</span></span><span class="line"><span class="cl">80x86/qbittorrent:4.2.5-focal-20200423-arm64-nova
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">pull</span> <span class="mi">80</span><span class="n">x86</span><span class="o">/</span><span class="n">qbittorrent</span><span class="p">:</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="n">focal</span><span class="o">-</span><span class="mi">20200423</span><span class="o">-</span><span class="n">arm64</span><span class="o">-</span><span class="n">nova</span>
+</span></span><span class="line"><span class="cl"><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">qbittorrent</span><span class="o">/</span><span class="n">config</span>
+</span></span><span class="line"><span class="cl"><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">qbittorrent</span><span class="o">/</span><span class="n">data</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">qbittorrent</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">PUID</span><span class="o">=</span><span class="mi">1000</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">PGID</span><span class="o">=</span><span class="mi">100</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">WEB_PORT</span><span class="o">=</span><span class="mi">8099</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">BT_PORT</span><span class="o">=</span><span class="mi">18099</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">TZ</span><span class="o">=</span><span class="n">Asia</span><span class="o">/</span><span class="n">Shanghai</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">restart</span><span class="o">=</span><span class="n">always</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">p</span> <span class="mi">8099</span><span class="p">:</span><span class="mi">8099</span> <span class="o">-</span><span class="n">p</span> <span class="mi">18099</span><span class="p">:</span><span class="mi">18099</span><span class="o">/</span><span class="n">tcp</span> <span class="o">-</span><span class="n">p</span> <span class="mi">18099</span><span class="p">:</span><span class="mi">18099</span><span class="o">/</span><span class="n">udp</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">qbittorrent</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">config</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">qbittorrent</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">sda1</span><span class="o">/</span><span class="n">N1_Download</span><span class="o">/</span><span class="n">qBittorrent</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">downloads</span> \
+</span></span><span class="line"><span class="cl"><span class="mi">80</span><span class="n">x86</span><span class="o">/</span><span class="n">qbittorrent</span><span class="p">:</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="n">focal</span><span class="o">-</span><span class="mi">20200423</span><span class="o">-</span><span class="n">arm64</span><span class="o">-</span><span class="n">nova</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="安装-adguardhome">安装 adguardhome</h3>
@@ -539,7 +540,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.119.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.120.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">LukeIO</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
