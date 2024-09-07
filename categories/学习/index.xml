@@ -9,6 +9,9 @@
     <pubDate>Mon, 20 Sep 2021 20:19:59 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://lukeio.github.io/2021/09/termux/</guid>
-    <description><![CDATA[参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无]]></description>
+    <description><![CDATA[<p>参考<a href="https://www.sqlsec.com/2018/05/termux.html" target="_blank" rel="noopener noreffer">Termux 高级终端安装使用配置教程</a>整理</p>
+<h2 id="termux简介">termux简介</h2>
+<blockquote>
+<p>Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。</p>]]></description>
 </item></channel>
 </rss>

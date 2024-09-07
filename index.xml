@@ -11,20 +11,41 @@
     <pubDate>Wed, 29 Sep 2021 03:45:59 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://lukeio.github.io/2021/09/n1-openwrt%E8%AE%BE%E7%BD%AE/</guid>
-    <description><![CDATA[固体介绍 Phicomm N1的 Openwrt 固件，见作者的发布页，以下设置基于60+o版本。 网络 接口》LAN 口 地址 192.168.1.2 子网掩码 255.255.255.0 网关 192.168.1.1 广播 192.168.1.255 自定义 DNS 1 2 3 x.x.x.x 223.5.5.5 119.29.29.29 物理设置]]></description>
+    <description><![CDATA[<h1 id="固体介绍">固体介绍</h1>
+<p>Phicomm N1的 Openwrt 固件，见作者的<a href="https://www.right.com.cn/forum/thread-4076037-1-1.html" target="_blank" rel="noopener noreffer">发布页</a>，以下设置基于60+o版本。</p>
+<h1 id="网络">网络</h1>
+<h2 id="接口lan-口">接口》LAN 口</h2>
+<ul>
+<li>
+<p>地址      192.168.1.2</p>]]></description>
 </item><item>
     <title>Termux</title>
     <link>https://lukeio.github.io/2021/09/termux/</link>
     <pubDate>Mon, 20 Sep 2021 20:19:59 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://lukeio.github.io/2021/09/termux/</guid>
-    <description><![CDATA[参考Termux 高级终端安装使用配置教程整理 termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无]]></description>
+    <description><![CDATA[<p>参考<a href="https://www.sqlsec.com/2018/05/termux.html" target="_blank" rel="noopener noreffer">Termux 高级终端安装使用配置教程</a>整理</p>
+<h2 id="termux简介">termux简介</h2>
+<blockquote>
+<p>Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。</p>]]></description>
 </item><item>
     <title>markdown</title>
     <link>https://lukeio.github.io/2021/09/markdown/</link>
     <pubDate>Mon, 20 Sep 2021 18:10:05 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://lukeio.github.io/2021/09/markdown/</guid>
-    <description><![CDATA[Markdown基本格式 标题 1 2 3 # 一级标题 ## 二级标题 ### 三级标题 一级标题 二级标题 三级标题 列表项 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 * 第一项]]></description>
+    <description><![CDATA[<p><strong>Markdown</strong>基本格式</p>
+<h1 id="标题"><strong>标题</strong></h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 一级标题
+</span></span><span class="line"><span class="cl">## 二级标题
+</span></span><span class="line"><span class="cl">### 三级标题
+</span></span></code></pr]]></description>
 </item></channel>
 </rss>
