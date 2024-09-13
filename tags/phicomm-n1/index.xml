@@ -15,6 +15,33 @@
 <h2 id="接口lan-口">接口》LAN 口</h2>
 <ul>
 <li>
-<p>地址      192.168.1.2</p>]]></description>
+<p>地址      192.168.1.2</p>
+</li>
+<li>
+<p>子网掩码  255.255.255.0</p>
+</li>
+<li>
+<p>网关      192.168.1.1</p>
+</li>
+<li>
+<p>广播      192.168.1.255</p>
+</li>
+<li>
+<p>自定义 DNS</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">x.x.x.x
+</span></span><span class="line"><span class="cl">223.5.5.5
+</span></span><span class="line"><span class="cl">119.29.29.29
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>物理设置，取消桥接，选中 eth0</p>]]></description>
 </item></channel>
 </rss>

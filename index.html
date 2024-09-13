@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-	<meta name="generator" content="Hugo 0.134.1">
+	<meta name="generator" content="Hugo 0.134.2">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -111,7 +111,34 @@
 <h2 id="接口lan-口">接口》LAN 口</h2>
 <ul>
 <li>
-<p>地址      192.168.1.2</p></div><div class="post-footer">
+<p>地址      192.168.1.2</p>
+</li>
+<li>
+<p>子网掩码  255.255.255.0</p>
+</li>
+<li>
+<p>网关      192.168.1.1</p>
+</li>
+<li>
+<p>广播      192.168.1.255</p>
+</li>
+<li>
+<p>自定义 DNS</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">x.x.x.x
+</span></span><span class="line"><span class="cl">223.5.5.5
+</span></span><span class="line"><span class="cl">119.29.29.29
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>物理设置，取消桥接，选中 eth0</p></div><div class="post-footer">
         <a href="/2021/09/n1-openwrt%E8%AE%BE%E7%BD%AE/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/phicomm-n1/">Phicomm N1</a>,&nbsp;<a href="/tags/openwrt/">Openwrt</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
@@ -136,12 +163,125 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 一级标题
 </span></span><span class="line"><span class="cl">## 二级标题
 </span></span><span class="line"><span class="cl">### 三级标题
-</span></span></code></pr</div><div class="post-footer">
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="一级标题">一级标题</h1>
+<h2 id="二级标题">二级标题</h2>
+<h3 id="三级标题">三级标题</h3>
+<h1 id="列表项"><strong>列表项</strong></h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">* 第一项
+</span></span><span class="line"><span class="cl">- 第二项
+</span></span><span class="line"><span class="cl">* 第三项
+</span></span><span class="line"><span class="cl">  * abcdef
+</span></span><span class="line"><span class="cl">    * opqrst
+</span></span><span class="line"><span class="cl">    * uvwxyz
+</span></span><span class="line"><span class="cl">  * abcdef
+</span></span><span class="line"><span class="cl">    * opqrst
+</span></span><span class="line"><span class="cl">    * uvwxyz
+</span></span><span class="line"><span class="cl">- 第四项
+</span></span><span class="line"><span class="cl">  - abcdef
+</span></span><span class="line"><span class="cl">    - opqrst
+</span></span><span class="line"><span class="cl">    - uvwxyz
+</span></span><span class="line"><span class="cl">  - abcdef
+</span></span><span class="line"><span class="cl">    - opqrst
+</span></span><span class="line"><span class="cl">    - uvwxyz
+</span></span><span class="line"><span class="cl">1. 第一项
+</span></span><span class="line"><span class="cl">2. 第二项
+</span></span><span class="line"><span class="cl">3. 第三项
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>第一项</li>
+</ul>
+<ul>
+<li>第二项</li>
+</ul>
+<ul>
+<li>第三项
+<ul>
+<li>abcdef
+<ul>
+<li>opqrst</li>
+<li>uvwxyz</li>
+</ul>
+</li>
+<li>abcdef
+<ul>
+<li>opqrst</li>
+<li>uvwxyz</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>第四项
+<ul>
+<li>abcdef
+<ul>
+<li>opqrst</li>
+<li>uvwxyz</li>
+</ul>
+</li>
+<li>abcdef
+<ul>
+<li>opqrst</li>
+<li>uvwxyz</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h1 id="任务列表"><strong>任务列表</strong></h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">- [ ] 项目一
+</span></span><span class="line"><span class="cl">- [x] 项目二
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><i class="far fa-square fa-fw"></i> 项目一</li>
+<li><i class="far fa-check-square fa-fw"></i> 项目二</li>
+</ul>
+<h1 id="段落"><strong>段落</strong></h1>
+<p>段落之间用空行分割</p></div><div class="post-footer">
         <a href="/2021/09/markdown/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/markdown/">Markdown</a></div></div>
 </article></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">LukeIO</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
