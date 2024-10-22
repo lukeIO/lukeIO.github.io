@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>N1 Openwrt设置 - LukeIO&#39;s Blog</title><meta name="author" content="LukeIO">
+<meta name="description" content="固体介绍 Phicomm N1的 Openwrt 固件，见作者的发布页，以下设置基于60&#43;o版本。
+"><meta name="keywords" content='Phicomm N1, openwrt'>
+  <meta itemprop="name" content="N1 Openwrt设置">
+  <meta itemprop="description" content="固体介绍 Phicomm N1的 Openwrt 固件，见作者的发布页，以下设置基于60&#43;o版本。">
+  <meta itemprop="datePublished" content="2021-09-29T03:45:59+00:00">
+  <meta itemprop="dateModified" content="2021-09-29T03:45:59+00:00">
+  <meta itemprop="wordCount" content="852">
+  <meta itemprop="keywords" content="Phicomm N1,Openwrt"><meta property="og:url" content="https://lukeio.github.io/posts/n1-openwrt%E8%AE%BE%E7%BD%AE/">
+  <meta property="og:site_name" content="LukeIO&#39;s Blog">
+  <meta property="og:title" content="N1 Openwrt设置">
+  <meta property="og:description" content="固体介绍 Phicomm N1的 Openwrt 固件，见作者的发布页，以下设置基于60&#43;o版本。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-09-29T03:45:59+00:00">
+    <meta property="article:modified_time" content="2021-09-29T03:45:59+00:00">
+    <meta property="article:tag" content="Phicomm N1">
+    <meta property="article:tag" content="Openwrt">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="N1 Openwrt设置">
+  <meta name="twitter:description" content="固体介绍 Phicomm N1的 Openwrt 固件，见作者的发布页，以下设置基于60&#43;o版本。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://lukeio.github.io/posts/n1-openwrt%E8%AE%BE%E7%BD%AE/" title="N1 Openwrt设置 - LukeIO&#39;s Blog" /><link rel="prev" type="text/html" href="https://lukeio.github.io/about/" title="About" /><link rel="alternate" type="text/markdown" href="https://lukeio.github.io/posts/n1-openwrt%E8%AE%BE%E7%BD%AE/index.md" title="N1 Openwrt设置 - LukeIO's Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "N1 Openwrt设置",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/lukeio.github.io\/posts\/n1-openwrt%E8%AE%BE%E7%BD%AE\/"
+    },"genre": "posts","keywords": "Phicomm N1, openwrt","wordcount":  852 ,
+    "url": "https:\/\/lukeio.github.io\/posts\/n1-openwrt%E8%AE%BE%E7%BD%AE\/","datePublished": "2021-09-29T03:45:59+00:00","dateModified": "2021-09-29T03:45:59+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "LukeIO"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="LukeIO&#39;s Blog"><span class="header-title-text">LukeIO&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/about/"
+                
+                
+              ><i class="fa-solid fa-user fa-fw fa-sm" aria-hidden="true"></i> 关于</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="LukeIO&#39;s Blog"><span class="header-title-text">LukeIO&#39;s Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/about/"
+                  
+                  
+                ><i class="fa-solid fa-user fa-fw fa-sm" aria-hidden="true"></i> 关于</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>N1 Openwrt设置</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      LukeIO</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category" title="分类 - 笔记"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 笔记</a></span></div><div class="post-meta-line"><span title="发布于 2021-09-29 03:45:59"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2021-09-29">2021-09-29</time></span>&nbsp;<span title="852 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 900 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#接口lan-口">接口》LAN 口</a></li>
+    <li><a href="#防火墙自定义规则添加">防火墙》自定义规则，添加</a></li>
+    <li><a href="#turbo-acc">Turbo ACC</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#nfs">NFS</a></li>
+    <li><a href="#硬盘休眠">硬盘休眠</a></li>
+    <li><a href="#网络共享">网络共享</a></li>
+    <li><a href="#qbittorrent">qBittorrent</a></li>
+    <li><a href="#ftp">FTP</a></li>
+    <li><a href="#aria2">Aria2</a></li>
+    <li><a href="#minidlna">miniDLNA</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#adguard-home">AdGuard Home</a></li>
+    <li><a href="#serverchan">ServerChan</a></li>
+    <li><a href="#docker-ce">Docker CE</a>
+      <ul>
+        <li><a href="#安装-portainer">安装 portainer</a></li>
+        <li><a href="#安装荒野无灯-filebrowser">安装荒野无灯 filebrowser</a></li>
+        <li><a href="#安装荒野无灯-qbittorrent">安装荒野无灯 qbittorrent</a></li>
+        <li><a href="#安装-adguardhome">安装 adguardhome</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="固体介绍" class="heading-element"><span>固体介绍</span>
+  <a href="#%e5%9b%ba%e4%bd%93%e4%bb%8b%e7%bb%8d" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Phicomm N1的 Openwrt 固件，见作者的<a href="https://www.right.com.cn/forum/thread-4076037-1-1.html"target="_blank" rel="external nofollow noopener noreferrer">发布页</a>，以下设置基于60+o版本。</p>
+<h2 id="网络" class="heading-element"><span>网络</span>
+  <a href="#%e7%bd%91%e7%bb%9c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="接口lan-口" class="heading-element"><span>接口》LAN 口</span>
+  <a href="#%e6%8e%a5%e5%8f%a3lan-%e5%8f%a3" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>
+<p>地址      192.168.1.2</p>
+</li>
+<li>
+<p>子网掩码  255.255.255.0</p>
+</li>
+<li>
+<p>网关      192.168.1.1</p>
+</li>
+<li>
+<p>广播      192.168.1.255</p>
+</li>
+<li>
+<p>自定义 DNS</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">x.x.x.x
+</span></span><span class="line"><span class="cl">223.5.5.5
+</span></span><span class="line"><span class="cl">119.29.29.29</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>物理设置，取消桥接，选中 eth0</p>
+</li>
+<li>
+<p>DHCP  勾选 强制 （禁用主路由 dhcp）</p>
+</li>
+<li>
+<p>禁用所有 ipv6 选项</p>
+</li>
+<li>
+<p>禁用无线</p>
+</li>
+</ul>
+<h2 id="防火墙自定义规则添加" class="heading-element"><span>防火墙》自定义规则，添加</span>
+  <a href="#%e9%98%b2%e7%81%ab%e5%a2%99%e8%87%aa%e5%ae%9a%e4%b9%89%e8%a7%84%e5%88%99%e6%b7%bb%e5%8a%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><code>iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE</code></p>
+<ul>
+<li>若有桥接，添加</li>
+</ul>
+<p><code>iptables -t nat -I POSTROUTING -o  br-lan  -j MASQUERADE</code></p>
+<ul>
+<li>重启防火墙</li>
+</ul>
+<h2 id="turbo-acc" class="heading-element"><span>Turbo ACC</span>
+  <a href="#turbo-acc" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>打开 BBR 选项</p>
+<h2 id="网络存储" class="heading-element"><span>网络存储</span>
+  <a href="#%e7%bd%91%e7%bb%9c%e5%ad%98%e5%82%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="nfs" class="heading-element"><span>NFS</span>
+  <a href="#nfs" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>添加共享目录 <code>/mnt/sda1</code>   <code>192.168.1.0/24</code>   <code>rw,sync,no_root_squash,insecure,no_subtree_check</code></p>
+<h2 id="硬盘休眠" class="heading-element"><span>硬盘休眠</span>
+  <a href="#%e7%a1%ac%e7%9b%98%e4%bc%91%e7%9c%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>sda1 3 分钟</p>
+<h2 id="网络共享" class="heading-element"><span>网络共享</span>
+  <a href="#%e7%bd%91%e7%bb%9c%e5%85%b1%e4%ba%ab" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>共享名  <code>N1_share</code>  目录 <code>/mnt/sda1/</code>  允许匿名
+编辑配置模板，<code>aio read size = 0</code>（去掉注释，提高读取速度）</p>
+<h2 id="qbittorrent" class="heading-element"><span>qBittorrent</span>
+  <a href="#qbittorrent" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>
+<p>下载文件存放目录 <code>/mnt/sda1/N1_Download/qBittorrent/</code></p>
+</li>
+<li>
+<p>WebUI 监听端口 8091</p>
+</li>
+<li>
+<p>下载设置&gt;临时路径 <code>/mnt/sda1/N1_Download/qBittorrent/tmp/</code></p>
+</li>
+<li>
+<p>磁盘缓存 128</p>
+</li>
+<li>
+<p>设置 bt-tracker  见<a href="https://github.com/ngosang/trackerslist"target="_blank" rel="external nofollow noopener noreferrer">bt-tracker源</a></p>
+</li>
+</ul>
+<h2 id="ftp" class="heading-element"><span>FTP</span>
+  <a href="#ftp" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>本地用户&gt;根目录 <code> /mnt/sda1</code></p>
+<h2 id="aria2" class="heading-element"><span>Aria2</span>
+  <a href="#aria2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>文件和位置&gt;下载目录 <code>/mnt/sda1/N1_Download/Aria2/</code></li>
+<li>磁盘缓存 128M</li>
+</ul>
+<h2 id="minidlna" class="heading-element"><span>miniDLNA</span>
+  <a href="#minidlna" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>接口，选中 eth0</li>
+<li>媒体目录  <code>/mnt/sda1</code></li>
+</ul>
+<h2 id="服务" class="heading-element"><span>服务</span>
+  <a href="#%e6%9c%8d%e5%8a%a1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="adguard-home" class="heading-element"><span>AdGuard Home</span>
+  <a href="#adguard-home" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>通过 docker 实现，见下文</p>
+<h2 id="serverchan" class="heading-element"><span>ServerChan</span>
+  <a href="#serverchan" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>
+<p><code>SCUxxxxxxxxxxxx</code></p>
+</li>
+<li>
+<p>设备名称 N1 路由器</p>
+</li>
+</ul>
+<h2 id="docker-ce" class="heading-element"><span>Docker CE</span>
+  <a href="#docker-ce" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>修改配置文件<code>/etc/docker/daemon.json</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">&#34;bip&#34;: &#34;172.31.0.1/24&#34;,
+</span></span><span class="line"><span class="cl">&#34;data-root&#34;: &#34;/mnt/mmcblk2p4/docker/&#34;,
+</span></span><span class="line"><span class="cl">&#34;log-level&#34;: &#34;warn&#34;,
+</span></span><span class="line"><span class="cl">&#34;log-driver&#34;: &#34;json-file&#34;,
+</span></span><span class="line"><span class="cl">&#34;log-opts&#34;: {
+</span></span><span class="line"><span class="cl">&#34;max-size&#34;: &#34;10m&#34;,
+</span></span><span class="line"><span class="cl">&#34;max-file&#34;: &#34;5&#34;
+</span></span><span class="line"><span class="cl">},
+</span></span><span class="line"><span class="cl">&#34;registry-mirrors&#34;: [
+</span></span><span class="line"><span class="cl">&#34;https://dockerhub.azk8s.cn&#34;,&#34;https://docker.mirrors.ustc.edu.cn/&#34;,&#34;https://hub-mirror.c.163.com&#34;,&#34;https://registry.docker-cn.com&#34;
+</span></span><span class="line"><span class="cl">]
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装-portainer" class="heading-element"><span>安装 portainer</span>
+  <a href="#%e5%ae%89%e8%a3%85-portainer" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">pull</span> <span class="n">portainer</span><span class="o">/</span><span class="n">portainer</span><span class="p">:</span><span class="n">linux</span><span class="o">-</span><span class="n">arm64</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">volume</span> <span class="n">create</span> <span class="n">portainer_data</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">Portainer</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">restart</span> <span class="n">always</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">TZ</span><span class="o">=</span><span class="n">Asia</span><span class="o">/</span><span class="n">Shanghai</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">p</span> <span class="mi">9999</span><span class="p">:</span><span class="mi">9000</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span><span class="p">:</span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="n">portainer_data</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> \
+</span></span><span class="line"><span class="cl"><span class="n">portainer</span><span class="o">/</span><span class="n">portainer</span><span class="p">:</span><span class="n">linux</span><span class="o">-</span><span class="n">arm64</span> </span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装荒野无灯-filebrowser" class="heading-element"><span>安装荒野无灯 filebrowser</span>
+  <a href="#%e5%ae%89%e8%a3%85%e8%8d%92%e9%87%8e%e6%97%a0%e7%81%af-filebrowser" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">pull</span> <span class="mi">80</span><span class="n">x86</span><span class="o">/</span><span class="n">filebrowser</span><span class="p">:</span><span class="n">arm64</span>
+</span></span><span class="line"><span class="cl"><span class="n">mkdir</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">filebrowser</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="o">-</span><span class="n">d</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">restart</span> <span class="n">always</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">name</span> <span class="n">filebrowser</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">net</span><span class="o">=</span><span class="n">host</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">SSL</span><span class="o">=</span><span class="n">on</span> <span class="o">-</span><span class="n">e</span> <span class="n">PUID</span><span class="o">=</span><span class="mi">1000</span> <span class="o">-</span><span class="n">e</span> <span class="n">PGID</span><span class="o">=</span><span class="mi">100</span> <span class="o">-</span><span class="n">e</span> <span class="n">WEB_PORT</span><span class="o">=</span><span class="mi">8091</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">filebrowser</span><span class="p">:</span><span class="o">/</span><span class="n">config</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">sda1</span><span class="p">:</span><span class="o">/</span><span class="n">myfiles</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">mount</span> <span class="n">type</span><span class="o">=</span><span class="n">tmpfs</span><span class="p">,</span><span class="n">destination</span><span class="o">=/</span><span class="n">tmp</span> \
+</span></span><span class="line"><span class="cl"><span class="mi">80</span><span class="n">x86</span><span class="o">/</span><span class="n">filebrowser</span><span class="p">:</span><span class="n">arm64</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装荒野无灯-qbittorrent" class="heading-element"><span>安装荒野无灯 qbittorrent</span>
+  <a href="#%e5%ae%89%e8%a3%85%e8%8d%92%e9%87%8e%e6%97%a0%e7%81%af-qbittorrent" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">pull</span> <span class="mi">80</span><span class="n">x86</span><span class="o">/</span><span class="n">qbittorrent</span><span class="p">:</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="n">focal</span><span class="o">-</span><span class="mi">20200423</span><span class="o">-</span><span class="n">arm64</span><span class="o">-</span><span class="n">nova</span>
+</span></span><span class="line"><span class="cl"><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">qbittorrent</span><span class="o">/</span><span class="n">config</span>
+</span></span><span class="line"><span class="cl"><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">qbittorrent</span><span class="o">/</span><span class="n">data</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">qbittorrent</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">PUID</span><span class="o">=</span><span class="mi">1000</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">PGID</span><span class="o">=</span><span class="mi">100</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">WEB_PORT</span><span class="o">=</span><span class="mi">8099</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">BT_PORT</span><span class="o">=</span><span class="mi">18099</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">e</span> <span class="n">TZ</span><span class="o">=</span><span class="n">Asia</span><span class="o">/</span><span class="n">Shanghai</span> \
+</span></span><span class="line"><span class="cl"><span class="o">--</span><span class="n">restart</span><span class="o">=</span><span class="n">always</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">p</span> <span class="mi">8099</span><span class="p">:</span><span class="mi">8099</span> <span class="o">-</span><span class="n">p</span> <span class="mi">18099</span><span class="p">:</span><span class="mi">18099</span><span class="o">/</span><span class="n">tcp</span> <span class="o">-</span><span class="n">p</span> <span class="mi">18099</span><span class="p">:</span><span class="mi">18099</span><span class="o">/</span><span class="n">udp</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">qbittorrent</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">config</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">qbittorrent</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> \
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">sda1</span><span class="o">/</span><span class="n">N1_Download</span><span class="o">/</span><span class="n">qBittorrent</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">downloads</span> \
+</span></span><span class="line"><span class="cl"><span class="mi">80</span><span class="n">x86</span><span class="o">/</span><span class="n">qbittorrent</span><span class="p">:</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="n">focal</span><span class="o">-</span><span class="mi">20200423</span><span class="o">-</span><span class="n">arm64</span><span class="o">-</span><span class="n">nova</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装-adguardhome" class="heading-element"><span>安装 adguardhome</span>
+  <a href="#%e5%ae%89%e8%a3%85-adguardhome" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker pull adguard/adguardhome:latest
+</span></span><span class="line"><span class="cl">mkdir -p /mnt/mmcblk2p4/adguardhome/confdir
+</span></span><span class="line"><span class="cl">mkdir -p /mnt/mmcblk2p4/adguardhome/workdir
+</span></span><span class="line"><span class="cl">docker run --name adguardhome \
+</span></span><span class="line"><span class="cl">-e TZ=Asia/Shanghai \
+</span></span><span class="line"><span class="cl">-v /mnt/mmcblk2p4/adguardhome/workdir:/opt/adguardhome/work \
+</span></span><span class="line"><span class="cl">-v /mnt/mmcblk2p4/adguardhome/confdir:/opt/adguardhome/conf \
+</span></span><span class="line"><span class="cl">--restart always \
+</span></span><span class="line"><span class="cl">--net host \
+</span></span><span class="line"><span class="cl">-d adguard/adguardhome:latest</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>网页管理端口 8090  监听端口 8053</p>
+</li>
+<li>
+<p>重定向为 dnsmasq 上游服务器,打开 openwrt 的&quot;网络“-&gt;&ldquo;DHCP/DNS&rdquo;， &ldquo;DNS 转发&quot;设为  <code>127.0.0.1#8053</code></p>
+</li>
+<li>
+<p>网络》防火墙》自定义规则，修改为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 8053
+</span></span><span class="line"><span class="cl">iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 8053</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>adguardhome 设置：
+上游 DNS 服务器 Bootstrap DNS 服务器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">x.x.x.x
+</span></span><span class="line"><span class="cl">223.5.5.5
+</span></span><span class="line"><span class="cl">119.29.29.29</span></span></code></pre></td></tr></table>
+</div>
+</div><p>并行请求勾选，速度限制改为 0，禁用 ipv6</p>
+<p>过滤规则</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://anti-ad.net/easylist.txt    #anti ad
+</span></span><span class="line"><span class="cl">https://github.com/521xueweihan/GitHub520    #github hosts</span></span></code></pre></td></tr></table>
+</div>
+</div><p>AdGuardHome 配置文件目录:  <code>/mnt/mmcblk2p4/adguardhome/confdir/AdGuardHome.yaml</code>
+部分内容:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">rewrites:
+</span></span><span class="line"><span class="cl">- domain: api.themoviedb.org
+</span></span><span class="line"><span class="cl">answer: 52.85.79.89
+</span></span><span class="line"><span class="cl">- domain: api.themoviedb.org
+</span></span><span class="line"><span class="cl">answer: 13.226.238.76
+</span></span><span class="line"><span class="cl">- domain: api.themoviedb.org
+</span></span><span class="line"><span class="cl">answer: 13.225.103.110
+</span></span><span class="line"><span class="cl">- domain: api.themoviedb.org
+</span></span><span class="line"><span class="cl">answer: 13.35.7.102
+</span></span><span class="line"><span class="cl">- domain: api.themoviedb.org
+</span></span><span class="line"><span class="cl">answer: 13.224.161.90</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">user_rules:
+</span></span><span class="line"><span class="cl">- &#39;@@||dig.bdurl.net^$important&#39;
+</span></span><span class="line"><span class="cl">- &#39;@@||passport.youdao.com^$important&#39;
+</span></span><span class="line"><span class="cl">- &#39;@@||is.snssdk.com^$important&#39;
+</span></span><span class="line"><span class="cl">- &#39;@@||sf3-ttcdn-tos.pstatp.com^$important&#39;
+</span></span><span class="line"><span class="cl">- &#39;@@||p.bokecc.com^$important&#39;</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2021-09-29 03:45:59">更新于 2021-09-29&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/n1-openwrt%E8%AE%BE%E7%BD%AE/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span></span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/phicomm-n1/" class="post-tag" title="标签 - Phicomm N1">Phicomm N1</a><a href="/tags/openwrt/" class="post-tag" title="标签 - Openwrt">Openwrt</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/termux/" class="post-nav-item" rel="prev" title="Termux"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Termux</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.136.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.13">FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">LukeIO</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"version":"v0.3.13"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>
