@@ -55,13 +55,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://lukeio.github.io/tags/termux/</loc>
+    <loc>https://lukeio.github.io/posts/termux/</loc>
     <lastmod>2021-09-20T20:19:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://lukeio.github.io/posts/termux/</loc>
+    <loc>https://lukeio.github.io/tags/termux/</loc>
     <lastmod>2021-09-20T20:19:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
