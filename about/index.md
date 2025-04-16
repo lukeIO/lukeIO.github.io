@@ -4,11 +4,11 @@
 
 # 关于我
 
-&gt; Hello world
+> Hello world
 
 
 ---
 
-> 作者:   
+> 作者: <no value>  
 > URL: https://lukeio.github.io/about/  
 

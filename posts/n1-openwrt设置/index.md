@@ -2,7 +2,7 @@
 
 
 # 固体介绍 
-Phicomm N1的 Openwrt 固件，见作者的[发布页](https://www.right.com.cn/forum/thread-4076037-1-1.html)，以下设置基于60&#43;o版本。
+Phicomm N1的 Openwrt 固件，见作者的[发布页](https://www.right.com.cn/forum/thread-4076037-1-1.html)，以下设置基于60+o版本。
 
 # 网络
 
@@ -62,17 +62,17 @@ sda1 3 分钟
 
 * WebUI 监听端口 8091
 
-* 下载设置&gt;临时路径 `/mnt/sda1/N1_Download/qBittorrent/tmp/`
+* 下载设置>临时路径 `/mnt/sda1/N1_Download/qBittorrent/tmp/`
 
 *  磁盘缓存 128
 
 *  设置 bt-tracker  见[bt-tracker源](https://github.com/ngosang/trackerslist)
 
 ## FTP 
-本地用户&gt;根目录 ` /mnt/sda1`
+本地用户>根目录 ` /mnt/sda1`
 
 ## Aria2 
-* 文件和位置&gt;下载目录 `/mnt/sda1/N1_Download/Aria2/`
+* 文件和位置>下载目录 `/mnt/sda1/N1_Download/Aria2/`
 * 磁盘缓存 128M
 
 ## miniDLNA 
@@ -94,16 +94,16 @@ sda1 3 分钟
 
 ```
 {
-&#34;bip&#34;: &#34;172.31.0.1/24&#34;,
-&#34;data-root&#34;: &#34;/mnt/mmcblk2p4/docker/&#34;,
-&#34;log-level&#34;: &#34;warn&#34;,
-&#34;log-driver&#34;: &#34;json-file&#34;,
-&#34;log-opts&#34;: {
-&#34;max-size&#34;: &#34;10m&#34;,
-&#34;max-file&#34;: &#34;5&#34;
+"bip": "172.31.0.1/24",
+"data-root": "/mnt/mmcblk2p4/docker/",
+"log-level": "warn",
+"log-driver": "json-file",
+"log-opts": {
+"max-size": "10m",
+"max-file": "5"
 },
-&#34;registry-mirrors&#34;: [
-&#34;https://dockerhub.azk8s.cn&#34;,&#34;https://docker.mirrors.ustc.edu.cn/&#34;,&#34;https://hub-mirror.c.163.com&#34;,&#34;https://registry.docker-cn.com&#34;
+"registry-mirrors": [
+"https://dockerhub.azk8s.cn","https://docker.mirrors.ustc.edu.cn/","https://hub-mirror.c.163.com","https://registry.docker-cn.com"
 ]
 }
 ```
@@ -172,7 +172,7 @@ docker run --name adguardhome \
 
 * 网页管理端口 8090  监听端口 8053
 
-* 重定向为 dnsmasq 上游服务器,打开 openwrt 的&#34;网络“-&gt;&#34;DHCP/DNS&#34;， &#34;DNS 转发&#34;设为  `127.0.0.1#8053`
+* 重定向为 dnsmasq 上游服务器,打开 openwrt 的"网络“->"DHCP/DNS"， "DNS 转发"设为  `127.0.0.1#8053`
 
 * 网络》防火墙》自定义规则，修改为
 
@@ -214,11 +214,11 @@ docker run --name adguardhome \
   ```
   ```
   user_rules:
-  - &#39;@@||dig.bdurl.net^$important&#39;
-  - &#39;@@||passport.youdao.com^$important&#39;
-  - &#39;@@||is.snssdk.com^$important&#39;
-  - &#39;@@||sf3-ttcdn-tos.pstatp.com^$important&#39;
-  - &#39;@@||p.bokecc.com^$important&#39;
+  - '@@||dig.bdurl.net^$important'
+  - '@@||passport.youdao.com^$important'
+  - '@@||is.snssdk.com^$important'
+  - '@@||sf3-ttcdn-tos.pstatp.com^$important'
+  - '@@||p.bokecc.com^$important'
   ```
 
 

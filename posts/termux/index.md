@@ -4,7 +4,7 @@
 参考[Termux 高级终端安装使用配置教程](https://www.sqlsec.com/2018/05/termux.html)整理
 
 ##  termux简介
-&gt; Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。
+> Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。
 
 * [termux官网](https://termux.com/)
 * [termux wiki](https://wiki.termux.com/wiki/Main_Page)
@@ -15,7 +15,7 @@
 
   Googleplay 上的版本已不再更新(见[说明](https://wiki.termux.com/wiki/Termux_Google_Play)),官方推荐到 **f-droid** [下载](https://f-droid.org/packages/com.termux/)
 * 第一次启动Termux的时候需要从[服务器](http://termux.net/bootstrap/)加载数据,如出现提示:
-  &gt; Ubable to install Termux was unable to install the bootstrap packages.Check your ntwork connection and try again.
+  > Ubable to install Termux was unable to install the bootstrap packages.Check your ntwork connection and try again.
  
   需要科学上网。
 
@@ -38,54 +38,54 @@
 * 常用快捷键 
     * termux 中手机**音量减**键相当于**Ctrl**键，快捷键组合如下
       ```   
-      Ctrl &#43; A -&gt; 将光标移动到行首
-      Ctrl &#43; C -&gt; 中止当前进程
-      Ctrl &#43; D -&gt; 注销终端会话			
-      Ctrl &#43; E -&gt; 将光标移动到行尾
-      Ctrl &#43; K -&gt; 从光标删除到行尾
-      Ctrl &#43; U -&gt; 从光标删除到行首
-      Ctrl &#43; L -&gt; 清除终端
-      Ctrl &#43; Z -&gt; 挂起（发送SIGTSTP到）当前进程
-      Ctrl &#43; alt &#43; C -&gt; 打开新会话
+      Ctrl + A -> 将光标移动到行首
+      Ctrl + C -> 中止当前进程
+      Ctrl + D -> 注销终端会话			
+      Ctrl + E -> 将光标移动到行尾
+      Ctrl + K -> 从光标删除到行尾
+      Ctrl + U -> 从光标删除到行首
+      Ctrl + L -> 清除终端
+      Ctrl + Z -> 挂起（发送SIGTSTP到）当前进程
+      Ctrl + alt + C -> 打开新会话
       ```
 						
     * **音量加**键的组合
       ```
-      音量加 &#43; E -&gt; Esc键
-      音量加 &#43; T -&gt; Tab键
-      音量加 &#43; 1 -&gt; F1（音量增加 &#43; 2 → F2…以此类推）
-      音量加 &#43; 0 -&gt; F10
-      音量加 &#43; B -&gt; Alt &#43; B，使用readline时返回一个单词
-      音量加 &#43; F -&gt; Alt &#43; F，使用readline时转发一个单词
-      音量加 &#43; X -&gt; Alt&#43;X
-      音量加 &#43; W -&gt; 向上箭头键
-      音量加 &#43; A -&gt; 向左箭头键
-      音量加 &#43; S -&gt; 向下箭头键
-      音量加 &#43; D -&gt; 向右箭头键
-      音量加 &#43; L -&gt; | （管道字符）
-      音量加 &#43; H -&gt; 〜（波浪号字符）
-      音量加 &#43; U -&gt; _ (下划线字符)
-      音量加 &#43; P -&gt; 上一页
-      音量加 &#43; N -&gt; 下一页
-      音量加 &#43; . -&gt; Ctrl &#43; \（SIGQUIT）
-      音量加 &#43; V -&gt; 显示音量控制
-      音量加 &#43; Q -&gt; 切换显示的功能键视
-      音量加 &#43; K -&gt; 切换显示的功能键视图
+      音量加 + E -> Esc键
+      音量加 + T -> Tab键
+      音量加 + 1 -> F1（音量增加 + 2 → F2…以此类推）
+      音量加 + 0 -> F10
+      音量加 + B -> Alt + B，使用readline时返回一个单词
+      音量加 + F -> Alt + F，使用readline时转发一个单词
+      音量加 + X -> Alt+X
+      音量加 + W -> 向上箭头键
+      音量加 + A -> 向左箭头键
+      音量加 + S -> 向下箭头键
+      音量加 + D -> 向右箭头键
+      音量加 + L -> | （管道字符）
+      音量加 + H -> 〜（波浪号字符）
+      音量加 + U -> _ (下划线字符)
+      音量加 + P -> 上一页
+      音量加 + N -> 下一页
+      音量加 + . -> Ctrl + \（SIGQUIT）
+      音量加 + V -> 显示音量控制
+      音量加 + Q -> 切换显示的功能键视
+      音量加 + K -> 切换显示的功能键视图
       ```
 ## termux 包管理
 termux 支持`pkg`和`apt`，`pkg`兼容`apt`
 
 ```
-pkg search &lt;query&gt;              # 搜索包
-pkg install &lt;package&gt;           # 安装包
-pkg uninstall &lt;package&gt;         # 卸载包
-pkg reinstall &lt;package&gt;         # 重新安装包
+pkg search <query>              # 搜索包
+pkg install <package>           # 安装包
+pkg uninstall <package>         # 卸载包
+pkg reinstall <package>         # 重新安装包
 pkg update                      # 更新源
 pkg upgrade                     # 升级软件包
 pkg list-all                    # 列出可供安装所有包
 pkg list-installed              # 列出已经安装的包
-pkg show &lt;package&gt;              # 显示某个包的详细信息
-pkg files &lt;package&gt;             # 显示某个包的相关文件夹路径	
+pkg show <package>              # 显示某个包的详细信息
+pkg files <package>             # 显示某个包的相关文件夹路径	
 ```
 
 安装几个基础应用
@@ -121,10 +121,10 @@ echo $TMPDIR
   * 用 `termux-change-repo` 命令替换
   * 输入以下命令替换
     ```
-    sed -i &#39;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@&#39; $PREFIX/etc/apt/sources.list
-    sed -i &#39;s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@&#39; $PREFIX/etc/apt/sources.list.d/game.list
-    sed -i &#39;s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@&#39; $PREFIX/etc/apt/sources.list.d/science.list
-    apt update &amp;&amp; apt upgrade
+    sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list
+    sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list
+    sed -i 's@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list
+    apt update && apt upgrade
     ```
 
     见[清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/termux/)
@@ -135,12 +135,12 @@ echo $TMPDIR
 
   使用脚本
   ```
-  sh -c &#34;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&#34;
+  sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
   ```
   弹框确认，允许访问文件。不小心拒绝，使用`termux-setup-storage` 命令可以重新获取访问权限。
 
   脚本执行后提示设置色彩样式和字体样式
-  &gt; Enter a number, leave blank to not to change: 14 Enter a number, leave blank to not to change: 4
+  > Enter a number, leave blank to not to change: 14 Enter a number, leave blank to not to change: 4
 
   可以用`chcolor`和`chfont`命令再次修改色彩和字体
 
@@ -148,7 +148,7 @@ echo $TMPDIR
 
   通过 `~/.termux/termux.properties` 定制扩展按键，加入以下内容:
   ```
-  extra-keys=[[&#39;ESC&#39;,&#39;|&#39;,&#39;/&#39;,&#39;-&#39;,&#39;HOME&#39;,&#39;UP&#39;,&#39;END&#39;,&#39;PGUP&#39;],[&#39;TAB&#39;,&#39;CTRL&#39;,&#39;ALT&#39;,&#39;DEL&#39;,&#39;LEFT&#39;,&#39;DOWN&#39;,&#39;RIGHT&#39;,&#39;PGDN&#39;]]
+  extra-keys=[['ESC','|','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','DEL','LEFT','DOWN','RIGHT','PGDN']]
   ```
   按键定义
   ```
@@ -180,15 +180,15 @@ echo $TMPDIR
 * vim 设置优化
   在 `~/.vimrc` 文件中修改
   ```
-  &#34;解决中文乱码
+  "解决中文乱码
   set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
   set enc=utf8
   set fencs=utf8,gbk,gb2312,gb18030
-  &#34;显示行号
+  "显示行号
   set nu
-  &#34;颜色主题
+  "颜色主题
   colorscheme desert
-  &#34;打开语法高亮
+  "打开语法高亮
   syntax on
   ```
 
@@ -220,7 +220,7 @@ echo $TMPDIR
 
     在 ~/.ssh 目录下生成 3 个文件 `id_rsa`(私钥)、`id_rsa.pub`(公钥)、`known_hosts`，将公钥内容复制到 `.ssh/` 目录下的 `authorized_keys `中
 
-    `cat id_rsa.pub &gt; authorized_keys`
+    `cat id_rsa.pub > authorized_keys`
  
     修改ssh配置
 
@@ -244,7 +244,7 @@ echo $TMPDIR
   sl           # ls输错，火车来了
   toilet       # 用字母拼写出更大字母的工具
   screenfetch/neofetch       # 显示系统信息
-  `echo &#34;xxxxx&#34; |curl -F-=\&lt;- qrenco.de`  # 生成二维码
+  `echo "xxxxx" |curl -F-=\<- qrenco.de`  # 生成二维码
   ```
 
 ## termux 其它应用
