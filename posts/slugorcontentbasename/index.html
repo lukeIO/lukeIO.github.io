@@ -4,48 +4,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
-    <title>Markdown - LukeIO&#39;s Blog</title><meta name="author" content="LukeIO">
-<meta name="description" content="Markdown基本格式
-标题 1 2 3 # 一级标题 ## 二级标题 ### 三级标题 一级标题 二级标题 三级标题 列表项 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 * 第一项 - 第二项 * 第三项 * abcdef * opqrst * uvwxyz * abcdef * opqrst * uvwxyz - 第四项 - abcdef - opqrst - uvwxyz - abcdef - opqrst - uvwxyz 1. 第一项 2. 第二项 3. 第三项 第一项 第二项 第三项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第四项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第一项 第二项 第三项 任务列表 1 2 - [ ] 项目一 - [x] 项目二 项目一 项目二 段落 段落之间用空行分割
-"><meta name="keywords" content='markdown'>
-  <meta itemprop="name" content="markdown">
-  <meta itemprop="description" content="Markdown基本格式
-标题 1 2 3 # 一级标题 ## 二级标题 ### 三级标题 一级标题 二级标题 三级标题 列表项 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 * 第一项 - 第二项 * 第三项 * abcdef * opqrst * uvwxyz * abcdef * opqrst * uvwxyz - 第四项 - abcdef - opqrst - uvwxyz - abcdef - opqrst - uvwxyz 1. 第一项 2. 第二项 3. 第三项 第一项 第二项 第三项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第四项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第一项 第二项 第三项 任务列表 1 2 - [ ] 项目一 - [x] 项目二 项目一 项目二 段落 段落之间用空行分割">
-  <meta itemprop="datePublished" content="2021-09-20T18:10:05+00:00">
-  <meta itemprop="dateModified" content="2021-09-20T18:10:05+00:00">
-  <meta itemprop="wordCount" content="1114">
-  <meta itemprop="keywords" content="Markdown"><meta property="og:url" content="https://lukeio.github.io/posts/slugorcontentbasename/">
+    <title>Termux - LukeIO&#39;s Blog</title><meta name="author" content="LukeIO">
+<meta name="description" content="参考Termux 高级终端安装使用配置教程整理
+termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。
+"><meta name="keywords" content='termux'>
+  <meta itemprop="name" content="Termux">
+  <meta itemprop="description" content="参考Termux 高级终端安装使用配置教程整理
+termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。">
+  <meta itemprop="datePublished" content="2021-09-20T20:19:59+00:00">
+  <meta itemprop="dateModified" content="2021-09-20T20:19:59+00:00">
+  <meta itemprop="wordCount" content="2206">
+  <meta itemprop="keywords" content="Termux"><meta property="og:url" content="https://lukeio.github.io/posts/slugorcontentbasename/">
   <meta property="og:site_name" content="LukeIO&#39;s Blog">
-  <meta property="og:title" content="markdown">
-  <meta property="og:description" content="Markdown基本格式
-标题 1 2 3 # 一级标题 ## 二级标题 ### 三级标题 一级标题 二级标题 三级标题 列表项 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 * 第一项 - 第二项 * 第三项 * abcdef * opqrst * uvwxyz * abcdef * opqrst * uvwxyz - 第四项 - abcdef - opqrst - uvwxyz - abcdef - opqrst - uvwxyz 1. 第一项 2. 第二项 3. 第三项 第一项 第二项 第三项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第四项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第一项 第二项 第三项 任务列表 1 2 - [ ] 项目一 - [x] 项目二 项目一 项目二 段落 段落之间用空行分割">
+  <meta property="og:title" content="Termux">
+  <meta property="og:description" content="参考Termux 高级终端安装使用配置教程整理
+termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2021-09-20T18:10:05+00:00">
-    <meta property="article:modified_time" content="2021-09-20T18:10:05+00:00">
-    <meta property="article:tag" content="Markdown">
+    <meta property="article:published_time" content="2021-09-20T20:19:59+00:00">
+    <meta property="article:modified_time" content="2021-09-20T20:19:59+00:00">
+    <meta property="article:tag" content="Termux">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="markdown">
-  <meta name="twitter:description" content="Markdown基本格式
-标题 1 2 3 # 一级标题 ## 二级标题 ### 三级标题 一级标题 二级标题 三级标题 列表项 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 * 第一项 - 第二项 * 第三项 * abcdef * opqrst * uvwxyz * abcdef * opqrst * uvwxyz - 第四项 - abcdef - opqrst - uvwxyz - abcdef - opqrst - uvwxyz 1. 第一项 2. 第二项 3. 第三项 第一项 第二项 第三项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第四项 abcdef opqrst uvwxyz abcdef opqrst uvwxyz 第一项 第二项 第三项 任务列表 1 2 - [ ] 项目一 - [x] 项目二 项目一 项目二 段落 段落之间用空行分割">
+  <meta name="twitter:title" content="Termux">
+  <meta name="twitter:description" content="参考Termux 高级终端安装使用配置教程整理
+termux简介 Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://lukeio.github.io/posts/slugorcontentbasename/" title="markdown - LukeIO&#39;s Blog" /><link rel="next" type="text/html" href="https://lukeio.github.io/posts/slugorcontentbasename/" title="Termux" /><link rel="alternate" type="text/markdown" href="https://lukeio.github.io/posts/slugorcontentbasename/index.md" title="markdown - LukeIO's Blog"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://lukeio.github.io/posts/slugorcontentbasename/" title="Termux - LukeIO&#39;s Blog" /><link rel="prev" type="text/html" href="https://lukeio.github.io/posts/slugorcontentbasename/" title="markdown" /><link rel="next" type="text/html" href="https://lukeio.github.io/about/" title="About" /><link rel="alternate" type="text/markdown" href="https://lukeio.github.io/posts/slugorcontentbasename/index.md" title="Termux - LukeIO's Blog"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "markdown",
+    "headline": "Termux",
     "inLanguage": "zh-CN",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https:\/\/lukeio.github.io\/posts\/slugorcontentbasename\/"
-    },"genre": "posts","keywords": "markdown","wordcount":  1114 ,
-    "url": "https:\/\/lukeio.github.io\/posts\/slugorcontentbasename\/","datePublished": "2021-09-20T18:10:05+00:00","dateModified": "2021-09-20T18:10:05+00:00","publisher": {
+    },"genre": "posts","keywords": "termux","wordcount":  2206 ,
+    "url": "https:\/\/lukeio.github.io\/posts\/slugorcontentbasename\/","datePublished": "2021-09-20T20:19:59+00:00","dateModified": "2021-09-20T20:19:59+00:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
         "@type": "Person",
@@ -85,10 +85,10 @@
 </header><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
 
   <article class="page single">
-    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Markdown</span>
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Termux</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      LukeIO</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category" title="分类 - 笔记"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 笔记</a></span></div><div class="post-meta-line"><span title="发布于 2021-09-20 18:10:05"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2021-09-20">2021-09-20</time></span>&nbsp;<span title="1114 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1200 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;</div>
+      LukeIO</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category" title="分类 - 学习"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 学习</a></span></div><div class="post-meta-line"><span title="发布于 2021-09-20 20:19:59"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2021-09-20">2021-09-20</time></span>&nbsp;<span title="2206 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 2300 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 5 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -96,50 +96,108 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#二级标题">二级标题</a>
-      <ul>
-        <li><a href="#三级标题">三级标题</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#定位标记"><strong>定位标记</strong></a></li>
+    <li><a href="#termux简介">termux简介</a></li>
+    <li><a href="#termux-安装">termux 安装</a></li>
+    <li><a href="#termux-基本操作">termux 基本操作</a></li>
+    <li><a href="#termux-包管理">termux 包管理</a></li>
+    <li><a href="#termux-文件目录">termux 文件目录</a></li>
+    <li><a href="#termux-优化设置">termux 优化设置</a></li>
+    <li><a href="#termux-常用软件">termux 常用软件</a></li>
+    <li><a href="#termux-其它应用">termux 其它应用</a></li>
   </ul>
 </nav></div>
-      </div><div class="content" id="content"><p><strong>Markdown</strong>基本格式</p>
-<h1 class="heading-element" id="标题"><span><strong>标题</strong></span>
-  <a href="#%e6%a0%87%e9%a2%98" class="heading-mark">
+      </div><div class="content" id="content"><p>参考<a href="https://www.sqlsec.com/2018/05/termux.html"target="_blank" rel="external nofollow noopener noreferrer">Termux 高级终端安装使用配置教程</a>整理</p>
+<h2 class="heading-element" id="termux简介"><span>termux简介</span>
+  <a href="#termux%e7%ae%80%e4%bb%8b" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h1><div class="highlight"><div class="chroma">
+</h2><blockquote>
+<p>Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。</p>
+</blockquote>
+<ul>
+<li><a href="https://termux.com/"target="_blank" rel="external nofollow noopener noreferrer">termux官网</a></li>
+<li><a href="https://wiki.termux.com/wiki/Main_Page"target="_blank" rel="external nofollow noopener noreferrer">termux wiki</a></li>
+<li><a href="https://github.com/termux/termux-app"target="_blank" rel="external nofollow noopener noreferrer">github地址</a></li>
+</ul>
+<h2 class="heading-element" id="termux-安装"><span>termux 安装</span>
+  <a href="#termux-%e5%ae%89%e8%a3%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>
+<p>下载安装包并安装</p>
+<p>Googleplay 上的版本已不再更新(见<a href="https://wiki.termux.com/wiki/Termux_Google_Play"target="_blank" rel="external nofollow noopener noreferrer">说明</a>),官方推荐到 <strong>f-droid</strong> <a href="https://f-droid.org/packages/com.termux/"target="_blank" rel="external nofollow noopener noreferrer">下载</a></p>
+</li>
+<li>
+<p>第一次启动Termux的时候需要从<a href="http://termux.net/bootstrap/"target="_blank" rel="external nofollow noopener noreferrer">服务器</a>加载数据,如出现提示:</p>
+<blockquote>
+<p>Ubable to install Termux was unable to install the bootstrap packages.Check your ntwork connection and try again.</p>
+</blockquote>
+<p>需要科学上网。</p>
+</li>
+</ul>
+<h2 class="heading-element" id="termux-基本操作"><span>termux 基本操作</span>
+  <a href="#termux-%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>
+<p>调整屏幕字体大小，双指捏合或展开</p>
+</li>
+<li>
+<p>长按屏幕，会出现菜单项，</p>
+<ul>
+<li>copy</li>
+<li>paste</li>
+<li>more
+<ul>
+<li>Select URL      # 提取屏幕上的链接</li>
+<li>Share transcipt # 分享命令</li>
+<li>Reset           # 重置</li>
+<li>Kill process    # 结束当前进程</li>
+<li>Style           # 风格配色</li>
+<li>Keep screen on  # 屏幕常亮</li>
+<li>help            # 帮助</li>
+<li>setting         # 设置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>屏幕左上角从左向右滑动，调出菜单，可以新建、切换会话。长按 keyboard 可以打开/关闭输入法工具条（扩展按键）</p>
+</li>
+<li>
+<p>常用快捷键</p>
+<ul>
+<li>
+<p>termux 中手机<strong>音量减</strong>键相当于<strong>Ctrl</strong>键，快捷键组合如下</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 一级标题
-</span></span><span class="line"><span class="cl">## 二级标题
-</span></span><span class="line"><span class="cl">### 三级标题</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Ctrl + A -&gt; 将光标移动到行首
+</span></span><span class="line"><span class="cl">Ctrl + C -&gt; 中止当前进程
+</span></span><span class="line"><span class="cl">Ctrl + D -&gt; 注销终端会话			
+</span></span><span class="line"><span class="cl">Ctrl + E -&gt; 将光标移动到行尾
+</span></span><span class="line"><span class="cl">Ctrl + K -&gt; 从光标删除到行尾
+</span></span><span class="line"><span class="cl">Ctrl + U -&gt; 从光标删除到行首
+</span></span><span class="line"><span class="cl">Ctrl + L -&gt; 清除终端
+</span></span><span class="line"><span class="cl">Ctrl + Z -&gt; 挂起（发送SIGTSTP到）当前进程
+</span></span><span class="line"><span class="cl">Ctrl + alt + C -&gt; 打开新会话</span></span></code></pre></td></tr></table>
 </div>
-</div><h1 class="heading-element" id="一级标题"><span>一级标题</span>
-  <a href="#%e4%b8%80%e7%ba%a7%e6%a0%87%e9%a2%98" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><h2 class="heading-element" id="二级标题"><span>二级标题</span>
-  <a href="#%e4%ba%8c%e7%ba%a7%e6%a0%87%e9%a2%98" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h3 class="heading-element" id="三级标题"><span>三级标题</span>
-  <a href="#%e4%b8%89%e7%ba%a7%e6%a0%87%e9%a2%98" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h3><h1 class="heading-element" id="列表项"><span><strong>列表项</strong></span>
-  <a href="#%e5%88%97%e8%a1%a8%e9%a1%b9" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><div class="highlight"><div class="chroma">
+</div></li>
+<li>
+<p><strong>音量加</strong>键的组合</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -160,136 +218,93 @@
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
+</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">* 第一项
-</span></span><span class="line"><span class="cl">- 第二项
-</span></span><span class="line"><span class="cl">* 第三项
-</span></span><span class="line"><span class="cl">  * abcdef
-</span></span><span class="line"><span class="cl">    * opqrst
-</span></span><span class="line"><span class="cl">    * uvwxyz
-</span></span><span class="line"><span class="cl">  * abcdef
-</span></span><span class="line"><span class="cl">    * opqrst
-</span></span><span class="line"><span class="cl">    * uvwxyz
-</span></span><span class="line"><span class="cl">- 第四项
-</span></span><span class="line"><span class="cl">  - abcdef
-</span></span><span class="line"><span class="cl">    - opqrst
-</span></span><span class="line"><span class="cl">    - uvwxyz
-</span></span><span class="line"><span class="cl">  - abcdef
-</span></span><span class="line"><span class="cl">    - opqrst
-</span></span><span class="line"><span class="cl">    - uvwxyz
-</span></span><span class="line"><span class="cl">1. 第一项
-</span></span><span class="line"><span class="cl">2. 第二项
-</span></span><span class="line"><span class="cl">3. 第三项</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">音量加 + E -&gt; Esc键
+</span></span><span class="line"><span class="cl">音量加 + T -&gt; Tab键
+</span></span><span class="line"><span class="cl">音量加 + 1 -&gt; F1（音量增加 + 2 → F2…以此类推）
+</span></span><span class="line"><span class="cl">音量加 + 0 -&gt; F10
+</span></span><span class="line"><span class="cl">音量加 + B -&gt; Alt + B，使用readline时返回一个单词
+</span></span><span class="line"><span class="cl">音量加 + F -&gt; Alt + F，使用readline时转发一个单词
+</span></span><span class="line"><span class="cl">音量加 + X -&gt; Alt+X
+</span></span><span class="line"><span class="cl">音量加 + W -&gt; 向上箭头键
+</span></span><span class="line"><span class="cl">音量加 + A -&gt; 向左箭头键
+</span></span><span class="line"><span class="cl">音量加 + S -&gt; 向下箭头键
+</span></span><span class="line"><span class="cl">音量加 + D -&gt; 向右箭头键
+</span></span><span class="line"><span class="cl">音量加 + L -&gt; | （管道字符）
+</span></span><span class="line"><span class="cl">音量加 + H -&gt; 〜（波浪号字符）
+</span></span><span class="line"><span class="cl">音量加 + U -&gt; _ (下划线字符)
+</span></span><span class="line"><span class="cl">音量加 + P -&gt; 上一页
+</span></span><span class="line"><span class="cl">音量加 + N -&gt; 下一页
+</span></span><span class="line"><span class="cl">音量加 + . -&gt; Ctrl + \（SIGQUIT）
+</span></span><span class="line"><span class="cl">音量加 + V -&gt; 显示音量控制
+</span></span><span class="line"><span class="cl">音量加 + Q -&gt; 切换显示的功能键视
+</span></span><span class="line"><span class="cl">音量加 + K -&gt; 切换显示的功能键视图</span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>第一项</li>
-</ul>
-<ul>
-<li>第二项</li>
-</ul>
-<ul>
-<li>第三项
-<ul>
-<li>abcdef
-<ul>
-<li>opqrst</li>
-<li>uvwxyz</li>
-</ul>
-</li>
-<li>abcdef
-<ul>
-<li>opqrst</li>
-<li>uvwxyz</li>
+</div></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<ul>
-<li>第四项
-<ul>
-<li>abcdef
-<ul>
-<li>opqrst</li>
-<li>uvwxyz</li>
-</ul>
-</li>
-<li>abcdef
-<ul>
-<li>opqrst</li>
-<li>uvwxyz</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<h1 class="heading-element" id="任务列表"><span><strong>任务列表</strong></span>
-  <a href="#%e4%bb%bb%e5%8a%a1%e5%88%97%e8%a1%a8" class="heading-mark">
+<h2 class="heading-element" id="termux-包管理"><span>termux 包管理</span>
+  <a href="#termux-%e5%8c%85%e7%ae%a1%e7%90%86" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h1><div class="highlight"><div class="chroma">
+</h2><p>termux 支持<code>pkg</code>和<code>apt</code>，<code>pkg</code>兼容<code>apt</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg search &lt;query&gt;              # 搜索包
+</span></span><span class="line"><span class="cl">pkg install &lt;package&gt;           # 安装包
+</span></span><span class="line"><span class="cl">pkg uninstall &lt;package&gt;         # 卸载包
+</span></span><span class="line"><span class="cl">pkg reinstall &lt;package&gt;         # 重新安装包
+</span></span><span class="line"><span class="cl">pkg update                      # 更新源
+</span></span><span class="line"><span class="cl">pkg upgrade                     # 升级软件包
+</span></span><span class="line"><span class="cl">pkg list-all                    # 列出可供安装所有包
+</span></span><span class="line"><span class="cl">pkg list-installed              # 列出已经安装的包
+</span></span><span class="line"><span class="cl">pkg show &lt;package&gt;              # 显示某个包的详细信息
+</span></span><span class="line"><span class="cl">pkg files &lt;package&gt;             # 显示某个包的相关文件夹路径	</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装几个基础应用</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">- [ ] 项目一
-</span></span><span class="line"><span class="cl">- [x] 项目二</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg update
+</span></span><span class="line"><span class="cl">pkg install vim curl wget git tree -y</span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li data-task=" " title="未完成"><i class="checkbox-icon fa-fw fa-regular fa-square" aria-hidden="true"></i>项目一</li>
-<li data-task="x" title="已完成"><i class="checkbox-icon fa-fw fa-solid fa-check-square" aria-hidden="true"></i>项目二</li>
-</ul>
-<h1 class="heading-element" id="段落"><span><strong>段落</strong></span>
-  <a href="#%e6%ae%b5%e8%90%bd" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><p>段落之间用空行分割</p>
-<p>换行  一行结束时输入两个空格</p>
-<h1 class="heading-element" id="内容对齐"><span><strong>内容对齐</strong></span>
-  <a href="#%e5%86%85%e5%ae%b9%e5%af%b9%e9%bd%90" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><div class="highlight"><div class="chroma">
+</div><p><code>pkg</code> 命令每次安装的时候自动执行 <code>apt update</code> 命令，建议使用。如有 deb 包，还可以使用<code>dpkg</code>安装</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;p align=&#34;left&#34;&gt;左对齐&lt;/p&gt;
-</span></span><span class="line"><span class="cl">&lt;p align=&#34;center&#34;&gt;居中&lt;/p&gt;
-</span></span><span class="line"><span class="cl">&lt;p align=&#34;right&#34;&gt;右对齐&lt;/p&gt;</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">dpkg</span><span class="w"> </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="kn">package</span><span class="p">.</span><span class="nx">deb</span><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="nx">安装</span><span class="w"> </span><span class="nx">deb</span><span class="w"> </span><span class="nx">包</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nx">dpkg</span><span class="w"> </span><span class="o">--</span><span class="nx">remove</span><span class="w"> </span><span class="p">[</span><span class="kn">package</span><span class="w"> </span><span class="nx">name</span><span class="p">]</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="nx">卸载软件包</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nx">dpkg</span><span class="w"> </span><span class="o">-</span><span class="nx">l</span><span class="w">                      </span><span class="err">#</span><span class="w"> </span><span class="nx">查看已安装的包</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nx">man</span><span class="w"> </span><span class="nx">dpkg</span><span class="w">                     </span><span class="err">#</span><span class="w"> </span><span class="nx">查看详细文档</span><span class="w">	</span></span></span></code></pre></td></tr></table>
 </div>
-</div><p align="left">左对齐</p>
-<p align="center">居中</p>
-<p align="right">右对齐</p>
-<h1 class="heading-element" id="分隔线"><span><strong>分隔线</strong></span>
-  <a href="#%e5%88%86%e9%9a%94%e7%ba%bf" class="heading-mark">
+</div><h2 class="heading-element" id="termux-文件目录"><span>termux 文件目录</span>
+  <a href="#termux-%e6%96%87%e4%bb%b6%e7%9b%ae%e5%bd%95" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h1><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">___</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<hr>
-<h1 class="heading-element" id="脚注"><span><strong>脚注</strong></span>
-  <a href="#%e8%84%9a%e6%b3%a8" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><div class="highlight"><div class="chroma">
+</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -299,21 +314,206 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">这里有脚注[^1]
-</span></span><span class="line"><span class="cl">这里有脚注[^note]
-</span></span><span class="line"><span class="cl">这里有脚注[^注释]
-</span></span><span class="line"><span class="cl">[^1]:脚注1的内容
-</span></span><span class="line"><span class="cl">[^note]:脚注2的内容
-</span></span><span class="line"><span class="cl">[^注释]:脚注3的内容</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo $HOME
+</span></span><span class="line"><span class="cl">/data/data/com.termux/files/home
+</span></span><span class="line"><span class="cl">echo $PREFIX
+</span></span><span class="line"><span class="cl">/data/data/com.termux/files/usr
+</span></span><span class="line"><span class="cl">echo $TMPDIR
+</span></span><span class="line"><span class="cl">/data/data/com.termux/files/usr/tmp/		</span></span></code></pre></td></tr></table>
 </div>
-</div><p>这里有脚注<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
-这里有脚注<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
-这里有脚注<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
-<h1 class="heading-element" id="文本格式"><span><strong>文本格式</strong></span>
-  <a href="#%e6%96%87%e6%9c%ac%e6%a0%bc%e5%bc%8f" class="heading-mark">
+</div><p><code>export</code>命令显示更多信息</p>
+<h2 class="heading-element" id="termux-优化设置"><span>termux 优化设置</span>
+  <a href="#termux-%e4%bc%98%e5%8c%96%e8%ae%be%e7%bd%ae" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h1><div class="highlight"><div class="chroma">
+</h2><ul>
+<li>
+<p>更换国内源</p>
+<ul>
+<li>
+<p>用 <code>termux-change-repo</code> 命令替换</p>
+</li>
+<li>
+<p>输入以下命令替换</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sed -i &#39;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@&#39; $PREFIX/etc/apt/sources.list
+</span></span><span class="line"><span class="cl">sed -i &#39;s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@&#39; $PREFIX/etc/apt/sources.list.d/game.list
+</span></span><span class="line"><span class="cl">sed -i &#39;s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@&#39; $PREFIX/etc/apt/sources.list.d/science.list
+</span></span><span class="line"><span class="cl">apt update &amp;&amp; apt upgrade</span></span></code></pre></td></tr></table>
+</div>
+</div><p>见<a href="https://mirrors.tuna.tsinghua.edu.cn/help/termux/"target="_blank" rel="external nofollow noopener noreferrer">清华大学开源软件镜像站</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>安装oh-my-zsh</p>
+<p>使用 zsh 替代 bash ，并安装 oh-my-zsh 。项目地址: <a href="https://github.com/Cabbagec/termux-ohmyzsh/"target="_blank" rel="external nofollow noopener noreferrer">https://github.com/Cabbagec/termux-ohmyzsh/</a></p>
+<p>使用脚本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sh -c &#34;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&#34;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>弹框确认，允许访问文件。不小心拒绝，使用<code>termux-setup-storage</code> 命令可以重新获取访问权限。</p>
+<p>脚本执行后提示设置色彩样式和字体样式</p>
+<blockquote>
+<p>Enter a number, leave blank to not to change: 14 Enter a number, leave blank to not to change: 4</p>
+</blockquote>
+<p>可以用<code>chcolor</code>和<code>chfont</code>命令再次修改色彩和字体</p>
+</li>
+<li>
+<p>定制扩展按键</p>
+<p>通过 <code>~/.termux/termux.properties</code> 定制扩展按键，加入以下内容:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">extra-keys=[[&#39;ESC&#39;,&#39;|&#39;,&#39;/&#39;,&#39;-&#39;,&#39;HOME&#39;,&#39;UP&#39;,&#39;END&#39;,&#39;PGUP&#39;],[&#39;TAB&#39;,&#39;CTRL&#39;,&#39;ALT&#39;,&#39;DEL&#39;,&#39;LEFT&#39;,&#39;DOWN&#39;,&#39;RIGHT&#39;,&#39;PGDN&#39;]]</span></span></code></pre></td></tr></table>
+</div>
+</div><p>按键定义</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">|CTRL|CTRL键|ALT|ALT键|FN|功能键|
+</span></span><span class="line"><span class="cl">|ESC|退出键|TAB|表格键|HOME|原位键|
+</span></span><span class="line"><span class="cl">|END|结尾键|PGUP|上翻页键|PGDN|下翻页键|
+</span></span><span class="line"><span class="cl">|INS|插入键|DEL|删除键|BKSP|退格键|
+</span></span><span class="line"><span class="cl">|UP |方向键上|LEFT|方向键左|RIGHT|方向键右|
+</span></span><span class="line"><span class="cl">|DOWN|方向键下|ENTER|回车键|BACKSLASH|反斜杠\|
+</span></span><span class="line"><span class="cl">|QUOTE|双引号键|APOSTROPHE|单引号键|F1~F12|F1-F12按键|</span></span></code></pre></td></tr></table>
+</div>
+</div><p>重启 termux 生效</p>
+</li>
+<li>
+<p>安装autosuggestions插件</p>
+<p>自动提示接下来可能要输入的命令，提高效率。下载:</p>
+<p><code>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</code></p>
+<p>修改配置 <code>~/.zshrc</code> 中的选项</p>
+<p><code>plugins=(git zsh-autosuggestions)</code></p>
+<p>输入<code>zsh</code>使配置生效</p>
+</li>
+<li>
+<p>修改启动问候语</p>
+<p><code>vim $PREFIX/etc/motd</code></p>
+</li>
+<li>
+<p>vim 设置优化
+在 <code>~/.vimrc</code> 文件中修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;解决中文乱码
+</span></span><span class="line"><span class="cl">set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+</span></span><span class="line"><span class="cl">set enc=utf8
+</span></span><span class="line"><span class="cl">set fencs=utf8,gbk,gb2312,gb18030
+</span></span><span class="line"><span class="cl">&#34;显示行号
+</span></span><span class="line"><span class="cl">set nu
+</span></span><span class="line"><span class="cl">&#34;颜色主题
+</span></span><span class="line"><span class="cl">colorscheme desert
+</span></span><span class="line"><span class="cl">&#34;打开语法高亮
+</span></span><span class="line"><span class="cl">syntax on</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 class="heading-element" id="termux-常用软件"><span>termux 常用软件</span>
+  <a href="#termux-%e5%b8%b8%e7%94%a8%e8%bd%af%e4%bb%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><ul>
+<li>
+<p>Openssh  <code>pkg install openssh</code></p>
+<ul>
+<li>
+<p>连接其它服务器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh -p 22 user@hostname_or_ip      # ssh -p 端口号 用户名@主机名或者IP
+</span></span><span class="line"><span class="cl">ssh -i id_rsa user@hostname_or_ip  # ssh -i 私钥 用户名@主机名或者IP</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>开启 termux 的 sshd 服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sshd        #开启服务
+</span></span><span class="line"><span class="cl">pkill sshd  #关闭服务</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Termux 下的 SSH 默认端口为8022，配置文件位于 <code>$PREFIX/etc/ssh/sshd_config</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">PrintMotd yes
+</span></span><span class="line"><span class="cl">PasswordAuthentication yes
+</span></span><span class="line"><span class="cl">Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server</span></span></code></pre></td></tr></table>
+</div>
+</div><p>用<code>paswd</code>命令修改用户密码后就可以使用密码登录SSH</p>
+</li>
+<li>
+<p>通过密钥对连接</p>
+<p>生成密钥对</p>
+<p><code>ssh-keygen</code></p>
+<p>在 ~/.ssh 目录下生成 3 个文件 <code>id_rsa</code>(私钥)、<code>id_rsa.pub</code>(公钥)、<code>known_hosts</code>，将公钥内容复制到 <code>.ssh/</code> 目录下的 <code>authorized_keys </code>中</p>
+<p><code>cat id_rsa.pub &gt; authorized_keys</code></p>
+<p>修改ssh配置</p>
+<p><code>vim $PREFIX/etc/ssh/sshd_config</code></p>
+<p><code>PasswordAuthentication no</code></p>
+<p>重启ssh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkill sshd
+</span></span><span class="line"><span class="cl">sshd</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>娱乐一下</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -326,207 +526,85 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">*斜体*
-</span></span><span class="line"><span class="cl">_斜体_
-</span></span><span class="line"><span class="cl">**粗体**
-</span></span><span class="line"><span class="cl">__粗体__
-</span></span><span class="line"><span class="cl">***粗斜体***
-</span></span><span class="line"><span class="cl">___粗斜体___
-</span></span><span class="line"><span class="cl">~~删除线~~
-</span></span><span class="line"><span class="cl">==高亮==
-</span></span><span class="line"><span class="cl">&lt;font color=&#34;blue&#34;&gt;字体颜色&lt;/font&gt;</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cmatrix      # 《黑客帝国》的代码雨视觉特效
+</span></span><span class="line"><span class="cl">cowsay       # 用 ASCII 字符描绘牛，羊和许多其他动物
+</span></span><span class="line"><span class="cl">figlet       # 创建 ASCII logo
+</span></span><span class="line"><span class="cl">hollywood    # 终端中伪造黑客屏幕，假装是黑客
+</span></span><span class="line"><span class="cl">nyancat      # 彩虹猫
+</span></span><span class="line"><span class="cl">sl           # ls输错，火车来了
+</span></span><span class="line"><span class="cl">toilet       # 用字母拼写出更大字母的工具
+</span></span><span class="line"><span class="cl">screenfetch/neofetch       # 显示系统信息
+</span></span><span class="line"><span class="cl">`echo &#34;xxxxx&#34; |curl -F-=\&lt;- qrenco.de`  # 生成二维码</span></span></code></pre></td></tr></table>
 </div>
-</div><p><em>斜体</em></p>
-<p><em>斜体</em></p>
-<p><strong>粗体</strong></p>
-<p><strong>粗体</strong></p>
-<p><em><strong>粗斜体</strong></em></p>
-<p><em><strong>粗斜体</strong></em></p>
-<p><del>删除线</del></p>
-<p><mark class="mark-default">高亮</mark></p>
-<p><font color="blue">字体颜色</font></p>
-<h1 class="heading-element" id="引用"><span><strong>引用</strong></span>
-  <a href="#%e5%bc%95%e7%94%a8" class="heading-mark">
+</div></li>
+</ul>
+<h2 class="heading-element" id="termux-其它应用"><span>termux 其它应用</span>
+  <a href="#termux-%e5%85%b6%e5%ae%83%e5%ba%94%e7%94%a8" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h1><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&gt; Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
-</span></span><span class="line"><span class="cl">&gt;&gt; 由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
-<blockquote>
-<p>由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。</p></blockquote></blockquote>
-<h2 class="heading-element" id="定位标记"><span><strong>定位标记</strong></span>
-  <a href="#%e5%ae%9a%e4%bd%8d%e6%a0%87%e8%ae%b0" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[转到列表项](#列表项)
-</span></span><span class="line"><span class="cl">[转到三级标题](#三级标题)</span></span></code></pre></td></tr></table>
-</div>
-</div><p><a href="#%e5%88%97%e8%a1%a8%e9%a1%b9">转到列表项</a></p>
-<p><a href="#%e4%b8%89%e7%ba%a7%e6%a0%87%e9%a2%98">转到三级标题</a></p>
-<h1 class="heading-element" id="插入链接"><span><strong>插入链接</strong></span>
-  <a href="#%e6%8f%92%e5%85%a5%e9%93%be%e6%8e%a5" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Google](https://www.google.com)</span></span></code></pre></td></tr></table>
-</div>
-</div><p><a href="https://www.google.com"target="_blank" rel="external nofollow noopener noreferrer">Google</a></p>
-<h1 class="heading-element" id="插入图片"><span><strong>插入图片</strong></span>
-  <a href="#%e6%8f%92%e5%85%a5%e5%9b%be%e7%89%87" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">![图片名称](图片链接或路径)
-</span></span><span class="line"><span class="cl">&lt;img src=&#34;图片链接或路径&#34; width=&#34;300&#34; alt=&#34;图片名称&#34;&gt;&lt;/img&gt;</span></span></code></pre></td></tr></table>
-</div>
-</div><p><img loading="lazy" src='图片链接或路径' alt="图片名称">
-<img src="图片链接或路径" width="300" alt="图片名称"></img></p>
-<h1 class="heading-element" id="插入代码"><span><strong>插入代码</strong></span>
-  <a href="#%e6%8f%92%e5%85%a5%e4%bb%a3%e7%a0%81" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">`int  a b c`</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>int  a b c</code></p>
+</h2><ul>
+<li>
+<p>搭建 hexo</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">```
-</span></span><span class="line"><span class="cl">int  a  b  c
-</span></span><span class="line"><span class="cl">a=b+c
-</span></span><span class="line"><span class="cl">```</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int  a  b  c
-</span></span><span class="line"><span class="cl">a=b+c</span></span></code></pre></td></tr></table>
-</div>
-</div><h1 class="heading-element" id="插入数学式"><span><strong>插入数学式</strong></span>
-  <a href="#%e6%8f%92%e5%85%a5%e6%95%b0%e5%ad%a6%e5%bc%8f" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$x^2+y^3=z$</span></span></code></pre></td></tr></table>
-</div>
-</div><p>$x<sup>2+y</sup>3=z$</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$$
-</span></span><span class="line"><span class="cl">y=x^2+2a+b/2
-</span></span><span class="line"><span class="cl">$$</span></span></code></pre></td></tr></table>
-</div>
-</div><p>$$
-y=x^2+2a+b/2
-$$</p>
-<h1 class="heading-element" id="插入表格"><span><strong>插入表格</strong></span>
-  <a href="#%e6%8f%92%e5%85%a5%e8%a1%a8%e6%a0%bc" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h1><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">| HEADER | HEADER | HEADER |
-</span></span><span class="line"><span class="cl">|:----:|:----:|:----:|
-</span></span><span class="line"><span class="cl">|      |      |      |
-</span></span><span class="line"><span class="cl">|      |      |      |
-</span></span><span class="line"><span class="cl">|      |      |      |</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg install nodejs-lts
+</span></span><span class="line"><span class="cl">npm install hexo-cli -g
+</span></span><span class="line"><span class="cl">hexo init myblog_hexo
+</span></span><span class="line"><span class="cl">cd myblog_hexo
+</span></span><span class="line"><span class="cl">npm install hexo-theme-fluid
+</span></span><span class="line"><span class="cl">cp node_modules/hexo-theme-fluid/_config.yml _config.fluid.yml
+</span></span><span class="line"><span class="cl">hexo g
+</span></span><span class="line"><span class="cl">hexo s					</span></span></code></pre></td></tr></table>
 </div>
-</div><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">HEADER</th>
-          <th style="text-align: center">HEADER</th>
-          <th style="text-align: center">HEADER</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center"></td>
-          <td style="text-align: center"></td>
-          <td style="text-align: center"></td>
-      </tr>
-      <tr>
-          <td style="text-align: center"></td>
-          <td style="text-align: center"></td>
-          <td style="text-align: center"></td>
-      </tr>
-      <tr>
-          <td style="text-align: center"></td>
-          <td style="text-align: center"></td>
-          <td style="text-align: center"></td>
-      </tr>
-  </tbody>
-</table>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>脚注1的内容&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</div><p>默认访问地址 http://localhost:4000</p>
 </li>
-<li id="fn:2">
-<p>脚注2的内容&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p>脚注3的内容&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
+<li>
+<p>搭建hugo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg install hugo -y
+</span></span><span class="line"><span class="cl">hugo new site myblog_hugo
+</span></span><span class="line"><span class="cl">cd myblog_hugo
+</span></span><span class="line"><span class="cl">git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+</span></span><span class="line"><span class="cl">cp themes/even/exampleSite/config.toml ./
+</span></span><span class="line"><span class="cl">hugo server -D</span></span></code></pre></td></tr></table>
 </div>
+</div><p>默认访问地址 http://localhost:1313</p>
+</li>
+<li>
+<p>安装 linux 发行版
+使用官方工具<a href="https://github.com/termux/proot-distro"target="_blank" rel="external nofollow noopener noreferrer">proot-distro</a>安装 linux</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg install proot-distro</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
 </div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
-      <div class="post-info-mod"><span title="更新于 2021-09-20 18:10:05">更新于 2021-09-20&nbsp;</span>
+      <div class="post-info-mod"><span title="更新于 2021-09-20 20:19:59">更新于 2021-09-20&nbsp;</span>
       </div><div class="post-info-license">
             <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
           </div></div><div class="post-info-line">
@@ -537,16 +615,16 @@ $$</p>
       </div></div>
 
   <div class="post-info-more">
-    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/markdown/" class="post-tag" title="标签 - Markdown">Markdown</a></section>
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/termux/" class="post-tag" title="标签 - Termux">Termux</a></section>
     <section><span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"><a href="/posts/slugorcontentbasename/" class="post-nav-item" rel="next" title="Termux">Termux<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  </div><div class="post-nav"><a href="/posts/slugorcontentbasename/" class="post-nav-item" rel="prev" title="Markdown"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Markdown</a><a href="/posts/slugorcontentbasename/" class="post-nav-item" rel="next" title="N1 Openwrt设置">N1 Openwrt设置<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article>
 
   <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
       <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
-    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.150.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha.2-20250919092044-50488dfb">FixIt</a>
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.151.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha.2-20251014082535-5c74d431">FixIt</a>
         </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2021 - 2025</span><span class="author" itemprop="copyrightHolder">
               <a href="/">LukeIO</a></span></div></div>
@@ -554,5 +632,5 @@ $$</p>
         </div></div><div id="mask"></div><noscript>
     <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
   </noscript>
-</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/posts/slugorcontentbasename/config.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/posts/slugorcontentbasename/config/page.js" defer></script><script src="/js/theme.min.js" defer></script></body>
 </html>
