@@ -1,233 +1,137 @@
-# N1 Openwrt设置
+# Termux
 
 
-# 固体介绍 
-Phicomm N1的 Openwrt 固件，见作者的[发布页](https://www.right.com.cn/forum/thread-4076037-1-1.html)，以下设置基于60+o版本。
+参考[Termux 高级终端安装使用配置教程](https://www.sqlsec.com/2018/05/termux.html)整理
 
-# 网络
+##  termux简介
+> Termux是一个Android终端仿真器和Linux环境应用程序，直接工作，无需根目录或设置。一个最小的基本系统被自动安装-额外的软件包可以使用APT软件包管理器来使用。不需要root，运行于内部存储。
 
-## 接口》LAN 口
+* [termux官网](https://termux.com/)
+* [termux wiki](https://wiki.termux.com/wiki/Main_Page)
+* [github地址](https://github.com/termux/termux-app)
 
-* 地址      192.168.1.2
+## termux 安装
+* 下载安装包并安装
 
-* 子网掩码  255.255.255.0
+  Googleplay 上的版本已不再更新(见[说明](https://wiki.termux.com/wiki/Termux_Google_Play)),官方推荐到 **f-droid** [下载](https://f-droid.org/packages/com.termux/)
+* 第一次启动Termux的时候需要从[服务器](http://termux.net/bootstrap/)加载数据,如出现提示:
+  > Ubable to install Termux was unable to install the bootstrap packages.Check your ntwork connection and try again.
+ 
+  需要科学上网。
 
-* 网关      192.168.1.1
-
-* 广播      192.168.1.255
-
-* 自定义 DNS
-  ```
-  x.x.x.x
-  223.5.5.5
-  119.29.29.29
-  ```
-
-* 物理设置，取消桥接，选中 eth0          
-
-* DHCP  勾选 强制 （禁用主路由 dhcp）
-
-* 禁用所有 ipv6 选项
-
-* 禁用无线
-
-## 防火墙》自定义规则，添加
-
-`iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE`
-
-* 若有桥接，添加
-
-`iptables -t nat -I POSTROUTING -o  br-lan  -j MASQUERADE`
-
-* 重启防火墙
-
-## Turbo ACC    
-打开 BBR 选项
-
-# 网络存储
-
-## NFS
-
-添加共享目录 `/mnt/sda1`   `192.168.1.0/24`   `rw,sync,no_root_squash,insecure,no_subtree_check`
-
-## 硬盘休眠
-sda1 3 分钟
-
-## 网络共享
-共享名  `N1_share`  目录 `/mnt/sda1/`  允许匿名
-编辑配置模板，`aio read size = 0`（去掉注释，提高读取速度）
-
-## qBittorrent 
-* 下载文件存放目录 `/mnt/sda1/N1_Download/qBittorrent/`
-
-* WebUI 监听端口 8091
-
-* 下载设置>临时路径 `/mnt/sda1/N1_Download/qBittorrent/tmp/`
-
-*  磁盘缓存 128
-
-*  设置 bt-tracker  见[bt-tracker源](https://github.com/ngosang/trackerslist)
-
-## FTP 
-本地用户>根目录 ` /mnt/sda1`
-
-## Aria2 
-* 文件和位置>下载目录 `/mnt/sda1/N1_Download/Aria2/`
-* 磁盘缓存 128M
-
-## miniDLNA 
-* 接口，选中 eth0
-* 媒体目录  `/mnt/sda1` 
-
-# 服务
-
-## AdGuard Home
-通过 docker 实现，见下文
-
-## ServerChan  
-* `SCUxxxxxxxxxxxx`
-
-* 设备名称 N1 路由器 
-
-## Docker CE 
-* 修改配置文件`/etc/docker/daemon.json`
+## termux 基本操作
+* 调整屏幕字体大小，双指捏合或展开
+* 长按屏幕，会出现菜单项，
+  * copy 
+  * paste
+  * more
+    * Select URL      # 提取屏幕上的链接
+    * Share transcipt # 分享命令
+    * Reset           # 重置
+    * Kill process    # 结束当前进程
+    * Style           # 风格配色
+    * Keep screen on  # 屏幕常亮
+    * help            # 帮助
+    * setting         # 设置
+					
+* 屏幕左上角从左向右滑动，调出菜单，可以新建、切换会话。长按 keyboard 可以打开/关闭输入法工具条（扩展按键）  
+* 常用快捷键 
+    * termux 中手机**音量减**键相当于**Ctrl**键，快捷键组合如下
+      ```   
+      Ctrl + A -> 将光标移动到行首
+      Ctrl + C -> 中止当前进程
+      Ctrl + D -> 注销终端会话			
+      Ctrl + E -> 将光标移动到行尾
+      Ctrl + K -> 从光标删除到行尾
+      Ctrl + U -> 从光标删除到行首
+      Ctrl + L -> 清除终端
+      Ctrl + Z -> 挂起（发送SIGTSTP到）当前进程
+      Ctrl + alt + C -> 打开新会话
+      ```
+						
+    * **音量加**键的组合
+      ```
+      音量加 + E -> Esc键
+      音量加 + T -> Tab键
+      音量加 + 1 -> F1（音量增加 + 2 → F2…以此类推）
+      音量加 + 0 -> F10
+      音量加 + B -> Alt + B，使用readline时返回一个单词
+      音量加 + F -> Alt + F，使用readline时转发一个单词
+      音量加 + X -> Alt+X
+      音量加 + W -> 向上箭头键
+      音量加 + A -> 向左箭头键
+      音量加 + S -> 向下箭头键
+      音量加 + D -> 向右箭头键
+      音量加 + L -> | （管道字符）
+      音量加 + H -> 〜（波浪号字符）
+      音量加 + U -> _ (下划线字符)
+      音量加 + P -> 上一页
+      音量加 + N -> 下一页
+      音量加 + . -> Ctrl + \（SIGQUIT）
+      音量加 + V -> 显示音量控制
+      音量加 + Q -> 切换显示的功能键视
+      音量加 + K -> 切换显示的功能键视图
+      ```
+## termux 包管理
+termux 支持`pkg`和`apt`，`pkg`兼容`apt`
 
 ```
-{
-"bip": "172.31.0.1/24",
-"data-root": "/mnt/mmcblk2p4/docker/",
-"log-level": "warn",
-"log-driver": "json-file",
-"log-opts": {
-"max-size": "10m",
-"max-file": "5"
-},
-"registry-mirrors": [
-"https://dockerhub.azk8s.cn","https://docker.mirrors.ustc.edu.cn/","https://hub-mirror.c.163.com","https://registry.docker-cn.com"
-]
-}
+pkg search <query>              # 搜索包
+pkg install <package>           # 安装包
+pkg uninstall <package>         # 卸载包
+pkg reinstall <package>         # 重新安装包
+pkg update                      # 更新源
+pkg upgrade                     # 升级软件包
+pkg list-all                    # 列出可供安装所有包
+pkg list-installed              # 列出已经安装的包
+pkg show <package>              # 显示某个包的详细信息
+pkg files <package>             # 显示某个包的相关文件夹路径	
 ```
 
-### 安装 portainer
-```     
-docker pull portainer/portainer:linux-arm64
-docker volume create portainer_data
-docker run -d \
---name=Portainer \
---restart always \
--e TZ=Asia/Shanghai \
--p 9999:9000 \
--v /var/run/docker.sock:/var/run/docker.sock \
--v portainer_data:/data \
-portainer/portainer:linux-arm64 
+安装几个基础应用
+
+```
+pkg update
+pkg install vim curl wget git tree -y
 ```
 
-### 安装荒野无灯 filebrowser
+`pkg` 命令每次安装的时候自动执行 `apt update` 命令，建议使用。如有 deb 包，还可以使用`dpkg`安装
+						
 ```
-docker pull 80x86/filebrowser:arm64
-mkdir /var/lib/filebrowser
-docker run -it -d \
---restart always \
---name filebrowser \
---net=host \
--e SSL=on -e PUID=1000 -e PGID=100 -e WEB_PORT=8091 \
--v /var/lib/filebrowser:/config \
--v /mnt/sda1:/myfiles \
---mount type=tmpfs,destination=/tmp \
-80x86/filebrowser:arm64
+dpkg -i ./package.deb        # 安装 deb 包
+dpkg --remove [package name] # 卸载软件包
+dpkg -l                      # 查看已安装的包
+man dpkg                     # 查看详细文档	
 ```
 
-### 安装荒野无灯 qbittorrent
+## termux 文件目录
 ```
-docker pull 80x86/qbittorrent:4.2.5-focal-20200423-arm64-nova
-mkdir -p /var/lib/qbittorrent/config
-mkdir -p /var/lib/qbittorrent/data
-docker run -d --name qbittorrent \
--e PUID=1000 \
--e PGID=100 \
--e WEB_PORT=8099 \
--e BT_PORT=18099 \
--e TZ=Asia/Shanghai \
---restart=always \
--p 8099:8099 -p 18099:18099/tcp -p 18099:18099/udp \
--v /var/lib/qbittorrent/config/:/config \
--v /var/lib/qbittorrent/data/:/data \
--v /mnt/sda1/N1_Download/qBittorrent/:/downloads \
-80x86/qbittorrent:4.2.5-focal-20200423-arm64-nova
+echo $HOME
+/data/data/com.termux/files/home
+echo $PREFIX
+/data/data/com.termux/files/usr
+echo $TMPDIR
+/data/data/com.termux/files/usr/tmp/		
 ```
 
-### 安装 adguardhome
-```
-docker pull adguard/adguardhome:latest
-mkdir -p /mnt/mmcblk2p4/adguardhome/confdir
-mkdir -p /mnt/mmcblk2p4/adguardhome/workdir
-docker run --name adguardhome \
--e TZ=Asia/Shanghai \
--v /mnt/mmcblk2p4/adguardhome/workdir:/opt/adguardhome/work \
--v /mnt/mmcblk2p4/adguardhome/confdir:/opt/adguardhome/conf \
---restart always \
---net host \
--d adguard/adguardhome:latest
-```
+`export`命令显示更多信息
 
-* 网页管理端口 8090  监听端口 8053
+## termux 优化设置
+* 更换国内源
+  * 用 `termux-change-repo` 命令替换
+  * 输入以下命令替换
+    ```
+    sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list
+    sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list
+    sed -i 's@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list
+    apt update && apt upgrade
+    ```
 
-* 重定向为 dnsmasq 上游服务器,打开 openwrt 的"网络“->"DHCP/DNS"， "DNS 转发"设为  `127.0.0.1#8053`
+    见[清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/termux/)
 
-* 网络》防火墙》自定义规则，修改为
+* 安装oh-my-zsh
 
-  ```
-  iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 8053
-  iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 8053
-  ```
-
-* adguardhome 设置：
-  上游 DNS 服务器 Bootstrap DNS 服务器 
-  ```
-  x.x.x.x
-  223.5.5.5
-  119.29.29.29
-  ```
-
-  并行请求勾选，速度限制改为 0，禁用 ipv6
-
-  过滤规则
-  ```
-  https://anti-ad.net/easylist.txt    #anti ad
-  https://github.com/521xueweihan/GitHub520    #github hosts
-  ```
-
-  AdGuardHome 配置文件目录:  `/mnt/mmcblk2p4/adguardhome/confdir/AdGuardHome.yaml`
-  部分内容:
-  ```
-  rewrites:
-  - domain: api.themoviedb.org
-  answer: 52.85.79.89
-  - domain: api.themoviedb.org
-  answer: 13.226.238.76
-  - domain: api.themoviedb.org
-  answer: 13.225.103.110
-  - domain: api.themoviedb.org
-  answer: 13.35.7.102
-  - domain: api.themoviedb.org
-  answer: 13.224.161.90
-  ```
-  ```
-  user_rules:
-  - '@@||dig.bdurl.net^$important'
-  - '@@||passport.youdao.com^$important'
-  - '@@||is.snssdk.com^$important'
-  - '@@||sf3-ttcdn-tos.pstatp.com^$important'
-  - '@@||p.bokecc.com^$important'
-  ```
-
-
----
-
-> 作者: LukeIO  
-> URL: https://lukeio.github.io/posts/slugorcontentbasename/  
-
-: https://github.com/Cabbagec/termux-ohmyzsh/
+  使用 zsh 替代 bash ，并安装 oh-my-zsh 。项目地址: https://github.com/Cabbagec/termux-ohmyzsh/
 
   使用脚本
   ```
