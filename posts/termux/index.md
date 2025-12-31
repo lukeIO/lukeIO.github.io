@@ -284,5 +284,5 @@ echo $TMPDIR
 ---
 
 > 作者: LukeIO  
-> URL: https://lukeio.github.io/posts/slugorcontentbasename/  
+> URL: https://lukeio.github.io/posts/termux/  
 
